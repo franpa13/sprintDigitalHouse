@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/styles-detalle.css">
+</head>
+<body>
+
+    <!------ HEADER ------>
+    <%- include('./partials/header') %>
+    
+ <main>
+    <section class="detalle">
+            <div class="informacion">
+                    <img src="/images/<%= libroLista.img %>" alt="<%= libroLista.titulo %>">
+                    <div class="info">
+                        <h3 classs="titulo"><%= libroLista.titulo %></h3>
+                        <div class="bookinf">
+                            <p>Autor: <%= libroLista.autor %></p>
+                            <p>Editorial: <%= libroLista.editorial %></p>
+                        </div>
+                        <div class="prices">
+                            <div class="compra">
+                                <p>Precio: $<%= libroLista.precio %></p>
+                                <a href="" class="carro">Agregar al carro</a>
+                            </div>
+                            <div class="pago">
+                                <p>Medio de Pago: XXXXXXXXX</p>
+                                <p>Costo de Envio: XXXXXXXXX</p>
+                            </div>
+                        </div>
+                        <p class="tags">Etiquetas: XXXXXX, XXXXXX, XXXXXX, XXXXXX</p>
+                        <div class="book-detail">
+                            <p>Número: XXXXXX</p>
+                            <p>Peso: XXXXXX</p>
+                            <p>Edición: XXXXXX</p>
+                            <p>Idioma: <%= libroLista.idioma %></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="comentario-reseña">
+                <div class="reseña">
+                    <span class="review1">Reseñas: </span>
+                    <span class="review2"></span>
+                </div>
+                <div class="comentario">
+                    <span class="comment1">Comentarios: </span>
+                    <span class="comment2"></span>
+                </div>
+            </section>
+            <div>
+                <a href="/biblioteca/editar/<%= libroLista.id %>" ><button class="boton-modificar">Modificar Producto</button></a>
+            </div>
+            <div>
+                <form action="/biblioteca/delete/<%= libroLista.id %>?_method=DELETE" method="POST">
+                    <button class="boton-modificar" type="submit">Eliminar</button>
+                </form>
+            </div>
+</main>
+
+        <!---- FOOTER-->
+        <%- include('./partials/footer') %>
+    </body>
+</html>

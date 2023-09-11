@@ -1,0 +1,108 @@
+/*********************** HEADER ******************/
+@import 'header.css';
+/************************ Footer *************************/
+@import 'footer.css';
+
+*{
+    box-sizing: border-box;
+    border: 0px;
+    padding: 1px;
+}
+body{
+    border: solid 1px black;
+}
+/************* Main *****************/
+.main{
+    display: flex;
+    justify-content: center;
+}
+.Contenedor-Carro{
+    width: 82%;
+
+}
+.Contenedor-Publicidad{
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#Articulo-1{
+    width: 100%;
+    display: flex;
+    border: solid 1px black;
+}
+#Articulo-1 img{
+    width: 100%;
+}
+#Contenido-Del-Articulo{
+    width: 60%;
+}
+.Imagen{
+    width: 20%;
+}
+.ImagenDeArticulo1{
+    width: 100%;
+}
+#Articulo-2{
+    width: 100%;
+    display: flex;
+    border: solid 1px black;
+}
+
+#Articulo-2 img{
+    width: 100%;
+}
+#Articulo-3{
+    width: 100%;
+    display: flex;
+    border: solid 1px black;
+}
+#Articulo-3 img{
+    width: 100%;
+}
+
+
+#Publicidad{
+    width: 200px;
+}
+#Publicidad img{
+    width: 100%;
+}
+#Destacados{
+    width: 200px;
+
+}
+#Destacados img{
+    width: 100%;
+}
+
+.DetallesDelProducto{
+    width: 20%;
+}
+#precio{
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Boton-Fisico-Digital{
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+#eliminar{
+    width: 100%;
+    height: 66%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+}
+button{
+    border: solid 2px black;
+    padding: 5px;
+}
+

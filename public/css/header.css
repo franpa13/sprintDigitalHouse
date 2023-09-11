@@ -1,0 +1,165 @@
+#header{
+    border: solid 1px black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 10px;
+    max-width: 100%;
+    background: rgb(120,21,169);
+    background: linear-gradient(90deg, rgba(120,21,169,1) 5%, rgba(218,42,42,1) 67%, rgba(170,45,188,1) 95%);
+}
+#imagen-LOGO{
+   width: 120px;
+}
+.Contenedor-Imagen-LOGO{
+   width: 25%;
+   display: flex;
+   justify-content: center;
+}
+.Contenedor-BarraDeBusqueda-Lupa{
+   width: 35%;
+   display: flex;
+   justify-content: center;
+}
+form {
+   display: flex;
+}
+.BarraDeBusqueda-Lupa{
+   width: 88%  ;
+   height: 30px;
+   margin: auto;
+   border: solid 1px black;
+}
+.Lupa{
+   height: 30px;
+   width: 22%;
+   margin: auto;
+   border: solid 1px black;
+}
+#Icono-Notificacion{
+   width: 50px;
+   height: 50px;
+   font-size: 30px;
+   border-radius: 50%;
+   background: rgb(131,109,42);
+background: linear-gradient(90deg, rgba(131,109,42,1) 5%, rgba(218,199,143,1) 67%, rgba(184,144,19,1) 95%);
+}
+.Contenedor-Icono-Notificacion{
+   width: 15%;
+   display: flex;
+   justify-content: flex-end;
+}
+#Icono-Perfil{
+   width: 80px;
+   height: 80px;
+   font-size: 60px;
+   border-radius: 50%;
+   background: rgb(42,93,131);
+background: linear-gradient(90deg, rgba(42,93,131,1) 5%, rgba(143,210,218,1) 67%, rgba(19,184,166,1) 95%);
+}
+.Contenedor-Icono-Perfil{
+   width: 25%;
+   margin: auto;
+   display: flex;
+   justify-content: center;
+}
+.Contenedor-Header-Img-barra{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/************** LISTA-HEADER *****************/
+.Lista{
+   display: flex;
+   justify-content: center;
+   font-weight: 800;
+   margin: auto;
+   font-size: center;
+}
+
+#Inicio{
+   border: solid 2px black;
+   width: 25%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: 0.5s;
+}
+#Inicio:hover{
+   transform: scale(1.2);
+   background: rgb(54,99,20);
+   background: linear-gradient(90deg, rgba(54,99,20,1) 5%, rgba(90,218,42,1) 67%, rgba(39,80,37,1) 95%);  
+}
+#Biblioteca{
+   border: solid 2px black;
+   width: 20%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#Biblioteca:hover{
+   transform: scale(1.2);
+   background: rgb(54,99,20);
+   background: linear-gradient(90deg, rgba(54,99,20,1) 5%, rgba(90,218,42,1) 67%, rgba(39,80,37,1) 95%);  
+}
+#Perfil{
+   border: solid 2px black;
+   width: 20%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#Perfil:hover{
+   transform: scale(1.2);
+   background: rgb(54,99,20);
+   background: linear-gradient(90deg, rgba(54,99,20,1) 5%, rgba(90,218,42,1) 67%, rgba(39,80,37,1) 95%);  
+}
+#Nosotros{
+   border: solid 2px black;
+   width: 20%;
+   display: flex;
+   justify-content: center;
+   align-items: center;  
+}
+#Nosotros:hover{
+   transform: scale(1.2);
+   background: rgb(54,99,20);
+   background: linear-gradient(90deg, rgba(54,99,20,1) 5%, rgba(90,218,42,1) 67%, rgba(39,80,37,1) 95%);  
+}
+#PreguntasFrecuentes{
+   border: solid 2px black;
+   width: 25%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#PreguntasFrecuentes:hover{
+   transform: scale(1.2);
+   background: rgb(54,99,20);
+   background: linear-gradient(90deg, rgba(54,99,20,1) 5%, rgba(90,218,42,1) 67%, rgba(39,80,37,1) 95%);  
+}
+#CarritoDeCompras{
+   width: 20%;
+   display: flex;
+   justify-content: flex-end;
+   width: 100px;
+}
+#CarritoDeCompra:hover{
+   transform: scale(1.2);
+}
+#Icono-CarritoDeCompras{
+   width: 40px;
+   height: 40px;
+   font-size: 30px;
+   display: flex;
+   align-items: center;
+   margin: auto;
+}
+#Icono-CarritoDeCompras:hover{
+   transform: scale(1.2);
+}
+a{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <!------ HEADER ------>
+    <%- include('./partials/header') %>
+
+
+    <main class="Main">
+        <div id="Contenedor-Carrusel">
+            <div class="Carrusel" id="Carrusel-1">
+                <div class="ContenidoCarrusel" id="InfoContenido-1">
+                    <div id="InfoDelLibro">
+                    <div id="Genero"><h4>Genero:</h4></div>
+                    <div id="Titulo"><h4>Titulo:</h4></div>
+                    <div id="Descripcion"><h4>Descripcion:</h4></div></div>
+                    <div class="ContenedorDeImagen"><img src="/images/Cincuenta-Sombras-De-Grey.jpg" alt="Cincuentas Sombras de Grey"></div>
+                </div>
+                <div class="FlechasCarrusel">
+                    <a href="#InfoContenido-4">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                    <a href="#InfoContenido-2">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="Carrusel" id="Carrusel-2">
+                <div class="ContenidoCarrusel" id="InfoContenido-2">
+                    <div id="InfoDelLibro">
+                        <div id="Genero"><h4>Genero:</h4></div>
+                        <div id="Titulo"><h4>Titulo:</h4></div>
+                        <div id="Descripcion"><h4>Descripcion:</h4></div></div>
+                    <div class="ContenedorDeImagen"><img src="/images/Alicia-En-El-Pais-De-Las-Maravillas.jpg" alt="Alicia en el Pais de las Maravillas"></div>
+                </div>
+                <div class="FlechasCarrusel">
+                    <a href="#InfoContenido-1">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                    <a href="#InfoContenido-3">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="Carrusel" id="Carrusel-3">
+                <div class="ContenidoCarrusel" id="InfoContenido-3">
+                    <div id="InfoDelLibro">
+                        <div id="Genero"><h4>Genero:</h4></div>
+                        <div id="Titulo"><h4>Titulo:</h4></div>
+                        <div id="Descripcion"><h4>Descripcion:</h4></div></div>
+                    <div class="ContenedorDeImagen"><img src="/images/Harry-Potter-La-Piedra-Filosofal.jpg" alt="Harry Potter la Piedra Filosofal"></div>
+                </div>
+                <div class="FlechasCarrusel">
+                    <a href="#InfoContenido-2">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                    <a href="#InfoContenido-4">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="Carrusel" id="Carrusel-4">
+                <div class="ContenidoCarrusel" id="InfoContenido-4">
+                    <div id="InfoDelLibro">
+                        <div id="Genero"><h4>Genero:</h4></div>
+                        <div id="Titulo"><h4>Titulo:</h4></div>
+                        <div id="Descripcion"><h4>Descripcion:</h4></div></div>
+                    <div class="ContenedorDeImagen"><img src="/images/Quijote-De-La-Mancha.jpg" alt="Quijote de la Mancha"></div>
+                </div>
+                <div class="FlechasCarrusel">
+                    <a href="#InfoContenido-3">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                    <a href="#InfoContenido-1">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="ContadorPuntos">
+            <a href="#InfoContenido-1"><i class="fa-regular fa-circle"></i></a>
+            <a href="#InfoContenido-2"><i class="fa-regular fa-circle"></i></a>
+            <a href="#InfoContenido-3"><i class="fa-regular fa-circle"></i></a>
+            <a href="#InfoContenido-4"><i class="fa-regular fa-circle"></i></a>
+        </div>
+
+     <section>
+         <h3>Calificaciones:</h3>
+        <div id="Calificaciones">
+            <% clasificaciones.forEach((clasificacion) => { %>
+            <div class="ContenedorDeTodasLasImagenesEnCalificaciones">
+            <div class="ContenedorDeImagen-EnCalificaciones"><a href="/biblioteca/detalle/<%= clasificacion.id %>"><img src="/images/<%= clasificacion.img%>" alt="<%= clasificacion.titulo %>"><div class="estrellas"><p><%= clasificacion
+                .clasificacion%></p><i class="fa-solid fa-star"></i></a></div></div></div>
+            <% }) %>
+        </div>
+     </section>
+    </main>
+    <!---- FOOTER-->
+    <%- include('./partials/footer') %>
+</body>
+</html

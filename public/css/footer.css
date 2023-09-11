@@ -1,0 +1,51 @@
+
+.Contenedor-Footer{
+    border: solid 1px black;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(120,21,169);
+    background: linear-gradient(90deg, rgba(120,21,169,1) 5%, rgba(218,42,42,1) 67%, rgba(170,45,188,1) 95%);
+
+}
+#Suscribirse{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+}
+#TerminosDeUso{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+}
+#PolitcasDePrivacidad{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+}
+#Contactos{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+#derechos-reservados{
+    font-size: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background: rgb(120,21,169);
+    background: linear-gradient(90deg, rgba(120,21,169,1) 5%, rgba(218,42,42,1) 67%, rgba(170,45,188,1) 95%);
+    color: rgb(58, 46, 233);
+    font-weight: 900;
+    font-size: 18px;
+}

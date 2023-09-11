@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/biblioteca.css">
+</head>
+<body>
+
+    <!------ HEADER ------>
+    <%- include('./partials/header') %>
+
+
+    <% datos.forEach((libros) => { %>
+<main class="Main">
+        <div id="Contenedor-Carrusel">
+            <div class="Carrusel" id="Carrusel-1">
+                <div class="ContenidoCarrusel" id="InfoContenido-1">
+                    <div id="InfoDelLibro">
+                    <div id="Genero"><h4>GENERO: <%=libros.genero %></h4></div>
+                    <div id="Titulo"><h4>TITULO: <%=libros.titulo %></h4></div>
+                    <div id="Descripcion"><h4>DESCRIPCION: <%=libros.descripcion %></h4></div></div>
+                    <div class="ContenedorDeImagen"><a href="/biblioteca/detalle/<%= libros.id %>"><img src="/images/<%=libros.img %>" alt="<%=libros.titulo %>"></a></div>
+                </div>
+            </div>
+        </main>
+        <% }) %>
+
+<!---- FOOTER-->
+<%- include('./partials/footer') %>
+</body>
+</html

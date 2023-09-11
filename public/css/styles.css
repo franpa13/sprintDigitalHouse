@@ -1,0 +1,134 @@
+/*********************** HEADER ******************/
+@import 'header.css';
+/************************ Footer *************************/
+@import 'footer.css';
+
+*{
+    box-sizing: border-box;
+    border: 0px;
+    padding: 1px;
+}
+body{
+    border: solid 1px ;
+    padding: 0px;
+}
+/****************** Main *****************/
+.Main{
+   margin: auto;
+}
+/************ CARRUSEL ***************/
+#Contenedor-Carrusel{
+    height: 400px;
+    overflow: hidden;
+}
+.Carrusel{
+    height: 100%;
+    position: relative;
+}
+.ContenidoCarrusel{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.FlechasCarrusel{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+#InfoContenido-1{
+    display: flex;
+}
+.ContenedorDeImagen{
+    width: 200px;
+}
+#InfoContenido-1 img{
+    width: 100%;
+}
+#Genero{
+    width: 100%;
+    border: solid 1px black;
+}
+#Titulo{
+    width: 100%;
+    border: solid 1px black;
+}
+#Descripcion{
+    width: 100%;
+    height: 250px;
+    border: solid 1px black;
+}
+#InfoDelLibro{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+#InfoContenido-2{
+    display: flex;
+}
+#InfoContenido-2 img{
+    width: 100%;
+}
+#InfoContenido-3{
+    display: flex;
+}
+#InfoContenido-3 img{
+    width: 100%;
+}
+#InfoContenido-4{
+    display: flex;
+}
+#InfoContenido-4 img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#ContadorPuntos{
+    display: flex;
+    justify-content: space-around;
+    border: solid 1px transparent;
+}
+#ContadorPuntos a{
+    font-size: 1em;
+}
+
+/**************** Calificaciones *****************/
+
+#Calificaciones{
+    padding: 2px;
+    font-size: 14px;
+    display: flex;
+}
+.ContenedorDeTodasLasImagenesEnCalificaciones{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    
+}
+.ContenedorDeImagen-EnCalificaciones{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ContenedorDeImagen-EnCalificaciones img{
+    width: 140px;
+    max-width: 100%;
+    
+}
+.estrellas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,134 @@
+/*********************** HEADER ******************/
+@import 'header.css';
+/************************ Footer *************************/
+@import 'footer.css';
+
+*{
+    box-sizing: border-box;
+    border: 0px;
+    padding: 1px;
+}
+body{
+    border: solid 1px black;
+}
+/************************ Main ***************************/
+main {
+    margin: auto;
+    border: solid 10px black;
+}
+
+.detalle{
+    padding: 15px;
+}
+
+main img{
+    width: 20vw;
+}
+
+main h3{
+    font-size: 2vw;
+}
+
+.informacion{
+    display: flex;
+    width: 90vw;
+}
+
+.info{
+    display: flex;
+    padding: 0vw 3vw;
+    flex-wrap: wrap;
+    align-items: center
+}
+
+.info p{
+    outline: 1px solid black;
+    height: 4vw;
+    width: 20vw;
+    font-size: 1.2vw;
+    margin: 15px;
+    padding: 15px;
+    justify-content: center;
+    font-weight: 1000;
+}
+
+.prices{
+    display: flex;
+}
+
+.carro{
+    outline: 1px solid transparent;
+    text-decoration: underline;
+}
+
+p.tags{
+    width: 42vw;
+    text-align: center;
+}
+
+.bookinf{
+    display: flex;
+}
+
+.book-detail{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60vw;
+    margin-top: 10px;
+}
+
+.book-detail p{
+    outline: none;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1vw;
+}
+
+.comentario-reseña{
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+}
+
+.reseña{
+    width: 40vw;
+    text-align: center;
+}
+
+.comentario{
+    width: 40vw;
+    text-align: center;
+}
+
+.comment1{
+    outline: 1px solid black;
+    display: flex;
+}
+
+.comment2{
+    outline: 1px solid black;
+    height: 15vh;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.review1{
+    outline: 1px solid black;
+    display: flex;
+}
+
+.review2{
+    outline: 1px solid black;
+    height: 15vh;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.boton-modificar{
+    padding: 10px 20px;
+    background-color: black ;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

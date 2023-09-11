@@ -1,0 +1,61 @@
+/*********************** HEADER ******************/
+@import 'header.css';
+/************************ Footer *************************/
+@import 'footer.css';
+
+*{
+    box-sizing: border-box;
+    border: 0px;
+    padding: 1px;
+}
+body{
+    border: solid 1px black;
+}
+/**************** MAIN ************/
+.Main{
+    margin: auto;
+ }
+ .ContenidoCarrusel{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.Carrusel{
+    height: 100%;
+    /*position: relative;*/
+}
+#Contenedor-Carrusel{
+    height: 400px;
+    /*overflow: hidden;*/
+}
+#InfoContenido-1{
+    display: flex;
+}
+#InfoContenido-1 img{
+    width: 100%;
+}
+#InfoDelLibro{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+#Genero{
+    width: 100%;
+    border: solid 1px black;
+}
+#Titulo{
+    width: 100%;
+    border: solid 1px black;
+}
+#Descripcion{
+    width: 100%;
+    height: 250px;
+    border: solid 1px black;
+}
+.ContenedorDeImagen{
+    width: 200px;
+}
+
+
