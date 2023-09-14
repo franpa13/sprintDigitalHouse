@@ -58,6 +58,7 @@ input:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 0px;
     
 }
 .Formulario input{
@@ -67,19 +68,20 @@ input:hover{
     border:solid 1px black;
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 .foto__perfil input{
     background-color:white ;
 }
 
 #text-log-in{
-    font-size: 30px;
+    margin-bottom: 0px;
+    font-size:30px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 900;
-    color: darkmagenta;
+    color: rgb(0, 0, 0);
 }
 .Formulario button{
     padding: 7px;
@@ -89,7 +91,7 @@ input:hover{
 }
 .botones{
     width: 8vw;
-    margin: 10px 30px 80px 30px;
+    margin: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -109,9 +111,11 @@ input:hover{
     color: white;
 }
 .botones-enviar-borrar{
+    width: 20vw;
+    height: 5vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin: auto;
+  
 }
 
