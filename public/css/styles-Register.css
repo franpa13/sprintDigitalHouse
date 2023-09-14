@@ -33,6 +33,7 @@ body{
 .Imagen-Formulario{
     width:55%;
 }
+
 .Formulario{
     display: flex;
     flex-direction: column;
@@ -43,14 +44,15 @@ input{
     transition: 0.2s;
 }
 label{
-    color: forestgreen;
+    color: rgb(0, 0, 0);
     font-weight: 900;
+ 
 }
 input:hover{
     transform: scale(1.2);
 }
 .Formulario{
-    width: 40%;
+    width: 80%;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -59,11 +61,18 @@ input:hover{
     
 }
 .Formulario input{
+    width: 30vw;
+    font-size: 14px;
     padding: 5px;
     border:solid 1px black;
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
 }
+.foto__perfil input{
+    background-color:white ;
+}
+
 #text-log-in{
     font-size: 30px;
     display: flex;
@@ -79,18 +88,25 @@ input:hover{
     flex-direction: column;
 }
 .botones{
+    width: 8vw;
+    margin: 10px 30px 80px 30px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgb(34, 15, 201) ;
+    background-color: rgb(0, 0, 255) ;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: medium;
-    color: rgba(251, 255, 3, 0.479);
+    font-size:15px;
+    color: rgba(255, 255, 255, 0.979);
     font-weight: 900;
+}
+.botones:hover{
+    transform: scale(1.2);
+    background-color: black;
+    color: white;
 }
 .botones-enviar-borrar{
     display: flex;
@@ -98,3 +114,4 @@ input:hover{
     align-items: center;
     margin: auto;
 }
+

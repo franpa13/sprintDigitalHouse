@@ -4,6 +4,7 @@
     font-size: 12px;
     padding: 10px;
     max-width: 100%;
+ 
     background: rgb(120,21,169);
     background: linear-gradient(90deg, rgba(120,21,169,1) 5%, rgba(218,42,42,1) 67%, rgba(170,45,188,1) 95%);
 }
@@ -161,5 +162,5 @@ background: linear-gradient(90deg, rgba(42,93,131,1) 5%, rgba(143,210,218,1) 67%
 }
 a{
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
 }
