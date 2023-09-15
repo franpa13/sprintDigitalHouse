@@ -1,5 +1,6 @@
 const arrLibros = require('../baseDatos/libros')
 
+
 const homeController = {
     /**** HOME ****/
     renderHome : (req, res) => {
@@ -28,8 +29,9 @@ const homeController = {
     renderRegistrarse : (req, res) => {
             res.render('Registrarse')
     },
-    redireccionarR: (req, res) => 
-        res.redirect('/')
+    createUser: (req, res) => {
+        res.redirect("/")
+    }
 }
 
 module.exports = homeController;

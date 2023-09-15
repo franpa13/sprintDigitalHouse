@@ -13,36 +13,50 @@
         <main>
             <section class="Contenedor-img-form">
                 <div class="Imagen-Formulario"><img src="/images/logo.png" alt="logo del Rincon Del Libro"></div>
-                <form class="Formulario" action="" method="POST" enctype="multipart/form-data">
+                <form class="Formulario" action="/registrarse" method="post" >
                     <p id="text-log-in">Register</p>
                     <p>
                         <label for="Nombre-Usuario">Nombre De Usuario</label>
-                        <input type="text" name="NombreUsuario" id="Nombre-Usuario" placeholder="NombreUsuario" required
-                            pattern=".{3,}" title="El Nombre de USari@ debe contener al menos tres caracteres.">
+                        <input type="text" name="NombreUsuario" value="<%= (locals.old && old.NombreUsuario) ? old.NombreUsuario : ``  %>" id="Nombre-Usuario" placeholder="NombreUsuario">
+                        <% if(locals.errors && errors.NombreUsuario) {%>
+                                <i>
+                                    <%= errors.NombreUsuario.msg %>
+                                </i>
+                       <% } %>
                     </p>
 
                     <p>
                         <label for="Email">Email</label>
-                        <input type="email" name="Email" id="Email" placeholder="Email" required>
+                        <input type="email" name="Email" id="Email" value="<%= (locals.old && old.Email) ? old.Email : ``  %>" placeholder="Email">
+                        <% if(locals.errors && errors.Email) {%>
+                                <i>
+                                    <%= errors.Email.msg %>
+                                </i>
+                       <% } %>
                     </p>
 
                     <p>
                         <label for="password">Contraseña</label>
-                        <input type="password" name="password" id="password" placeholder="Contraseña" required
-                            pattern=".{6,}" title="La Contraseña debe contener al menos cuatro caracteres.">
+                        <input type="password" name="password" id="password" placeholder="Contraseña"  >
+                        <% if(locals.errors && errors.password) {%>
+                                <i>
+                                    <%= errors.password.msg %>
+                                </i>
+                       <% } %>
                     </p>
-
-                    
                     <p>
-                        <label for="repassword">Confirmar contraseña</label>
-                        <input type="password" name="repassword" id="repassword" placeholder="Ingrese la contraseña nuevamente" required
-                            pattern=".{6,}" title="La Contraseña debe contener al menos cuatro caracteres.">
+                        <label for="repassword">Introduce la contraseña nuevamente</label>
+                        <input type="password" name="rePassword" id="repassword" placeholder="Contraseña"  >
+                        <% if(locals.errors && errors.rePassword) {%>
+                                <i>
+                                    <%= errors.rePassword.msg %>
+                                </i>
+                       <% } %>
                     </p>
 
                     <p class="foto__perfil">
                         <label for="image">Foto de Perfil</label>
-                        <input type="file" name="image" id="image" placeholder="Email" accept=".png,.jpg,.jpeg"
-                            required>
+                        <input type="file" name="image" id="image" placeholder="Email" accept=".png,.jpg,.jpeg">
                     </p>
                     
                     <div class="botones-enviar-borrar">
@@ -50,13 +64,6 @@
                         <button class="botones" type="reset">Borrar</button>
                     </div>
                 </form>
-
-
-
-
-
-
-
                 </div>
             </section>
 
