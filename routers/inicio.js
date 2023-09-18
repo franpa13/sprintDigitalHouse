@@ -19,4 +19,5 @@ router.post('/iniciar-sesion', homeController.redireccionarI);
 router.get('/registrarse', homeController.renderRegistrarse);
 router.post('/registrarse', upload.single("image"), arrRegister , validateRegister , homeController.createUser)
 
+
 module.exports = router

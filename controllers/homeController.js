@@ -4,6 +4,7 @@ const arrLibros = require('../baseDatos/libros')
 const homeController = {
     /**** HOME ****/
     renderHome : (req, res) => {
+        // console.log("esto es req " , req.session.userLogged);
         const carrusel = arrLibros.filter((libros) => libros.carrusel === true);
 
         const clasificacion = arrLibros.filter((libros) => libros.clasificacion > 3)
@@ -31,7 +32,8 @@ const homeController = {
     },
     createUser: (req, res) => {
         res.redirect("/")
-    }
+    },
+
 }
 
 module.exports = homeController;
