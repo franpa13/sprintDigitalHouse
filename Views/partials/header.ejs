@@ -16,20 +16,19 @@
         <div class="Contenedor-Icono-Notificacion">
             <button id="Icono-Notificacion" type="submit"><i class="fa-regular fa-bell"></i></button>
         </div>
-        <% if(isAnUserLoged) { %>
+        <% if(locals.isLogged) {%>
+        <div class="Contenedor-Icono-Perfil">
+            <a href="/UserProfile"> <img class="foto__perfil" src="/images/imageUsers/<%= locals.userLog.image %>" alt="IMAGEN DE PERFIL"></i></button></a>
+            <p><strong><%= locals.userLog.NombreUsuario %></strong></p> 
+        </div>
+    <% } else { %>
+        <div class="register__log">
+        <a href="/registrarse">Register</a>
+        <a href="iniciar-sesion">Log in</a>
+        </div>
+    <% } %>
 
-            <div class="nombre__imagen">
-                <div class="Contenedor-Icono-Perfil">
-                    <img src="/images/ImageUsers/<%= dataUser.image %>" alt="Imagen Usuario">
-                    <!-- <i class="fa-regular fa-user"></i></button> -->
-                </div>
-                <div class="userName">
-                    <strong>
-                        <%= dataUser.name %>
-                    </strong>
-                </div>
-            </div>
-            <% }%>
+
 
     </section>
     <nav class="Contenedor-Lista">
@@ -43,12 +42,16 @@
             <div id="Perfil">
                 <li><a href="/iniciar-sesion">PERFIL</a></li>
             </div>
-            <div id="Nosotros">
-                <li><a href="/biblioteca/CreacionDeProductos">CREAR</a></li>
-            </div>
-            <div id="PreguntasFrecuentes">
-                <li><a href="">PREGUNTAS FRECUENTES</a></li>
-            </div>
+           
+            <% if(locals.isLogged) { %>
+                <div id="Nosotros">
+                    <li><a href="/biblioteca/CreacionDeProductos">CREAR</a></li>
+                </div>
+                <div id="PreguntasFrecuentes">
+                    <li><a href="/logout">CERRAR SESION</a></li>
+                </div>
+            <% }  %>
+           
             <div id="CarritoDeCompras">
                 <li id="Icono-CarritoDeCompras"><a href="/carrito-de-compra"><i
                             class="fa-solid fa-cart-shopping"></i></a></li>

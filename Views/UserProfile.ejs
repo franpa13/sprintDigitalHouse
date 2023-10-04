@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <%- include('./partials/head') %>
+    
+    <link rel="stylesheet" href="/css/styles-Log-In.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/header') %>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Perfil de Usuario</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+            }
+            .profile-container {
+                max-width: 600px;
+                margin: 0 auto;
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+            }
+            .profile-picture {
+                max-width: 200px;
+                border-radius: 50%;
+                margin: 0 auto;
+                display: block;
+            }
+            .user-details {
+                text-align: center;
+                margin-top: 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="profile-container">
+            <img src="/images/imageUsers/<%= user.image %>" alt="Foto de perfil" class="profile-picture">
+            <div class="user-details">
+                <h1><%= user.NombreUsuario %></h1>
+                <p><%= user.Email %></p>
+            </div>
+        </div>
+    </body>
+    </html>
+    
+
+</body>
+</html>
+

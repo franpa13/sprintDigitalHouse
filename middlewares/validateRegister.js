@@ -37,7 +37,7 @@ const validateRegister = (req, res, next) => {
         if (comparacion) {
 
             const NewUser = {
-                id: Date.now(),
+                id: `${dataUser.length + 1} `,
                 ...req.body,
                 image: req.file.filename,
                 password: hashSync(req.body.password, 10)
@@ -48,7 +48,7 @@ const validateRegister = (req, res, next) => {
             fs.writeFileSync(pathData, JSON.stringify(dataUser))
             /** SESSION :  */
 
-            req.session.userLogged = NewUser
+            // req.session.userLogged = NewUser
 
             next()
         } else {

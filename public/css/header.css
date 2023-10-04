@@ -1,80 +1,127 @@
 .nombre__imagen {
-margin-top: 22px;
-}
-.Contenedor-Icono-Perfil img{
-   width: 90px;
-   border-radius: 90%;
+   margin-top: 22px;
 }
 
-.nombe__imagen{
+.Contenedor-Icono-Perfil {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+}
+
+.Contenedor-Icono-Perfil p strong {
+   font-weight: bold;
+   font-style: italic;
+   text-decoration: none;
+   color: rgb(222, 230, 236);
+   text-transform: uppercase;
+}
+
+.Contenedor-Icono-Perfil a  {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 10vw;
+
+}
+
+.foto__perfil {
+   width: 8vw;
+   border-radius: 10px;
+   border: 2px solid rgb(192, 184, 184);
+}
+
+.fa-user {
+   font-size: 30px;
+
+}
+
+.nombe__imagen {
    display: flex;
    flex-direction: column;
    align-items: center;
    text-align: center;
    justify-content: center;
 }
-.userName{
+
+.userName {
    text-align: center;
    width: 100%;
 }
-.userName strong{
+
+.userName strong {
    color: rgb(240, 239, 239);
    margin-top: 20px;
    text-align: center;
    font-size: 20px;
    font-family: 'Roboto', sans-serif;
 }
-#header{
-    border: solid 1px black;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    padding: 10px;
-    max-width: 100%;
-    background: rgb(120,21,169);
-    background: linear-gradient(90deg, rgba(120,21,169,1) 5%, rgba(218,42,42,1) 67%, rgba(170,45,188,1) 95%);
+
+#header {
+   border: solid 1px black;
+   font-family: 'Roboto', sans-serif;
+   font-size: 15px;
+   padding: 10px;
+   max-width: 100%;
+   background: rgb(120, 21, 169);
+   background: linear-gradient(90deg, rgba(120, 21, 169, 1) 5%, rgba(218, 42, 42, 1) 67%, rgba(170, 45, 188, 1) 95%);
 }
-#imagen-LOGO{
+
+#imagen-LOGO {
    width: 120px;
 }
-.Contenedor-Imagen-LOGO{
+
+.Contenedor-Imagen-LOGO {
    width: 12%;
    display: flex;
    justify-content: center;
 }
-.Contenedor-BarraDeBusqueda-Lupa{
+
+.Contenedor-BarraDeBusqueda-Lupa {
    width: 35%;
    display: flex;
    justify-content: center;
 }
+
+.Contenedor-BarraDeBusqueda-Lupa input {
+   width: 25vw;
+   margin-left: 10vw;
+}
+
 form {
    display: flex;
 }
-.BarraDeBusqueda-Lupa{
-   width: 88%  ;
+
+.BarraDeBusqueda-Lupa {
+   width: 88%;
    height: 30px;
    margin: auto;
    border: solid 1px black;
 }
-.Lupa{
+
+.Lupa {
    height: 30px;
    width: 22%;
    margin: auto;
    border: solid 1px black;
 }
-#Icono-Notificacion{
+
+#Icono-Notificacion {
    width: 50px;
    height: 50px;
    font-size: 30px;
    border-radius: 50%;
-   background: rgb(131,109,42);
-background: linear-gradient(90deg, rgba(131,109,42,1) 5%, rgba(218,199,143,1) 67%, rgba(184,144,19,1) 95%);
+   background: rgb(131, 109, 42);
+   background: linear-gradient(90deg, rgba(131, 109, 42, 1) 5%, rgba(218, 199, 143, 1) 67%, rgba(184, 144, 19, 1) 95%);
 }
-.Contenedor-Icono-Notificacion{
+
+.Contenedor-Icono-Notificacion {
    width: 15%;
    display: flex;
    justify-content: flex-end;
 }
-#Icono-Perfil{
+
+/* #Icono-Perfil{
    width: 80px;
    height: 80px;
    font-size: 60px;
@@ -87,17 +134,18 @@ background: linear-gradient(90deg, rgba(42,93,131,1) 5%, rgba(143,210,218,1) 67%
    margin: auto;
    display: flex;
    justify-content: center;
-}
-.Contenedor-Header-Img-barra{
+} */
+.Contenedor-Header-Img-barra {
    margin-left: 0px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
 }
+
 /************** LISTA-HEADER *****************/
-.Lista{
+.Lista {
    display: flex;
    justify-content: center;
    font-weight: 800;
@@ -105,7 +153,7 @@ background: linear-gradient(90deg, rgba(42,93,131,1) 5%, rgba(143,210,218,1) 67%
    font-size: center;
 }
 
-#Inicio{
+#Inicio {
    border: solid 2px black;
    width: 25%;
    display: flex;
@@ -113,69 +161,81 @@ background: linear-gradient(90deg, rgba(42,93,131,1) 5%, rgba(143,210,218,1) 67%
    align-items: center;
    transition: 0.5s;
 }
-#Inicio:hover{
+
+#Inicio:hover {
    transform: scale(1.2);
-   background: rgb(54,99,20);
-   background: linear-gradient(90deg, rgba(54,99,20,1) 5%, rgba(90,218,42,1) 67%, rgba(39,80,37,1) 95%);  
+   background: rgb(54, 99, 20);
+   background: linear-gradient(90deg, rgba(54, 99, 20, 1) 5%, rgba(90, 218, 42, 1) 67%, rgba(39, 80, 37, 1) 95%);
 }
-#Biblioteca{
+
+#Biblioteca {
    border: solid 2px black;
    width: 20%;
    display: flex;
    justify-content: center;
    align-items: center;
 }
-#Biblioteca:hover{
+
+#Biblioteca:hover {
    transform: scale(1.2);
-   background: rgb(54,99,20);
-   background: linear-gradient(90deg, rgba(54,99,20,1) 5%, rgba(90,218,42,1) 67%, rgba(39,80,37,1) 95%);  
+   background: rgb(54, 99, 20);
+   background: linear-gradient(90deg, rgba(54, 99, 20, 1) 5%, rgba(90, 218, 42, 1) 67%, rgba(39, 80, 37, 1) 95%);
 }
-#Perfil{
+
+#Perfil {
    border: solid 2px black;
    width: 20%;
    display: flex;
    justify-content: center;
    align-items: center;
 }
-#Perfil:hover{
+
+#Perfil:hover {
    transform: scale(1.2);
-   background: rgb(54,99,20);
-   background: linear-gradient(90deg, rgba(54,99,20,1) 5%, rgba(90,218,42,1) 67%, rgba(39,80,37,1) 95%);  
+   background: rgb(54, 99, 20);
+   background: linear-gradient(90deg, rgba(54, 99, 20, 1) 5%, rgba(90, 218, 42, 1) 67%, rgba(39, 80, 37, 1) 95%);
 }
-#Nosotros{
+
+#Nosotros {
    border: solid 2px black;
    width: 20%;
    display: flex;
    justify-content: center;
-   align-items: center;  
+   align-items: center;
 }
-#Nosotros:hover{
+
+#Nosotros:hover {
    transform: scale(1.2);
-   background: rgb(54,99,20);
-   background: linear-gradient(90deg, rgba(54,99,20,1) 5%, rgba(90,218,42,1) 67%, rgba(39,80,37,1) 95%);  
+   background: rgb(54, 99, 20);
+   background: linear-gradient(90deg, rgba(54, 99, 20, 1) 5%, rgba(90, 218, 42, 1) 67%, rgba(39, 80, 37, 1) 95%);
 }
-#PreguntasFrecuentes{
+
+#PreguntasFrecuentes {
    border: solid 2px black;
    width: 25%;
    display: flex;
    justify-content: center;
    align-items: center;
 }
-#PreguntasFrecuentes:hover{
+
+#PreguntasFrecuentes:hover {
    transform: scale(1.2);
-   background: rgb(54,99,20);
-   background: linear-gradient(90deg, rgba(54,99,20,1) 5%, rgba(90,218,42,1) 67%, rgba(39,80,37,1) 95%);  
+   background: rgb(54, 99, 20);
+   background: linear-gradient(90deg, rgba(54, 99, 20, 1) 5%, rgba(90, 218, 42, 1) 67%, rgba(39, 80, 37, 1) 95%);
 }
-#CarritoDeCompras{
+
+#CarritoDeCompras {
    width: 20%;
    display: flex;
    justify-content: flex-end;
    width: 100px;
 }
-#CarritoDeCompra:hover{
+
+#CarritoDeCompra:hover {
    transform: scale(1.2);
 }
-#Icono-CarritoDeCompras{
+
+#Icono-CarritoDeCompras {
    width: 40px;
    height: 40px;
    font-size: 30px;
@@ -183,10 +243,28 @@ background: linear-gradient(90deg, rgba(42,93,131,1) 5%, rgba(143,210,218,1) 67%
    align-items: center;
    margin: auto;
 }
-#Icono-CarritoDeCompras:hover{
+
+#Icono-CarritoDeCompras:hover {
    transform: scale(1.2);
 }
-a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+
+a {
+   text-decoration: none;
+   color: rgb(0, 0, 0);
+}
+
+.register__log {
+   width: 18vw;
+   display: flex;
+
+   justify-content: space-around;
+}
+
+.register__log a {
+   background-color: rgb(255, 255, 255);
+   border-radius: 5px;
+   text-align: center;
+   width: 45%;
+   font-size: 20px;
+   border: 2px solid;
 }
