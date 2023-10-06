@@ -103,3 +103,9 @@ label{
     color: rgba(251, 255, 3, 0.479);
     font-weight: 900;
 }
+.recordar__usuario{
+display: flex;
+flex-direction: row-reverse;
+
+justify-content: start;
+}

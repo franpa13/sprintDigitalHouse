@@ -2,6 +2,10 @@ const fs = require('fs')
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
+const cookies = require('cookie-parser');
+
+
+
 
 app.use(express.static('public'));
 
@@ -26,8 +30,12 @@ app.use(session({
 
 
 //**MIDDLEWARES**//
+app.use(cookies())
+
 const userLogged = require("./middlewares/userLogged")
 app.use(userLogged)
+
+
 /******* ROUTERS ******/
 const homeRouter = require('./routers/inicio');
 const carritodecompraRouter = require('./routers/CarritoDeCompras');

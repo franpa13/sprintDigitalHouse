@@ -1,3 +1,9 @@
 [
-   
+    {
+        "id": "1 ",
+        "NombreUsuario": "fran",
+        "Email": "juanito@kak.com",
+        "password": "$2a$10$RvDTTdXKP/Owu1jXpdd7GemQ7P2cNBXWPedoJbbrc5kziUHKYS1um",
+        "image": "img-user-1696630609722.jpg"
+    }
 ]
