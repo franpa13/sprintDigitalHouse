@@ -132,3 +132,7 @@ a{
     justify-content: center;
     align-items: center;
 }
+.img__banner{
+width: 100%;
+height: 26vw;
+}

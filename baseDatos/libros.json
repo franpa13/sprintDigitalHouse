@@ -246,5 +246,17 @@
         "editorial": "231",
         "idioma": "321",
         "cantidad": "231"
+    },
+    {
+        "id": "1696429415161",
+        "titulo": "harry potter",
+        "descripcion": "holaaaa",
+        "genero": "ficcion",
+        "img": "img-1696429415155.jpg",
+        "autor": "frean",
+        "precio": 4154,
+        "editorial": "dh",
+        "idioma": "español",
+        "cantidad": 45
     }
 ]

@@ -26,8 +26,8 @@ app.use(session({
 
 
 //**MIDDLEWARES**//
-const loggedMidleware = require("./middlewares/loggedMiddleware")
-app.use(loggedMidleware)
+const userLogged = require("./middlewares/userLogged")
+app.use(userLogged)
 /******* ROUTERS ******/
 const homeRouter = require('./routers/inicio');
 const carritodecompraRouter = require('./routers/CarritoDeCompras');
