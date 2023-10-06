@@ -1,6 +1,8 @@
 const arrLibros = require('../baseDatos/libros')
 const User = require("../models/User")
 const bcryptjs = require("bcryptjs")
+
+
 const homeController = {
     /**** HOME ****/
     renderHome: (req, res) => {
@@ -20,18 +22,22 @@ const homeController = {
     },
     /**** INICIAR SESION ****/
     renderIniciarSesion: (req, res) => {
-        console.log(req.session);
+   
         res.render('IniciarSesion')
     },
     redireccionarI: (req, res) => {
         // const formData = req.body; 
         // res.redirect("/")
+
         let userLogin = User.findByField("Email", req.body.Email)
         if (userLogin) {
             let isApassword = bcryptjs.compareSync(req.body.password, userLogin.password)
             if (isApassword) {
                 delete userLogin.password
                 req.session.userLog = userLogin
+                if (req.body.recordar__usuario) {
+                    res.cookie("userEmail",req.body.Email ,{maxAge:(1000 * 60)*2 })
+                }
                 return res.redirect("/UserProfile")
             }
             return res.render("iniciarSesion", {
@@ -52,6 +58,7 @@ const homeController = {
     },
     /**** REGISTRARSE ****/
     renderRegistrarse: (req, res) => {
+
         res.render('Registrarse')
     },
     createUser: (req, res) => {
@@ -60,12 +67,14 @@ const homeController = {
 
     // VISTA PERFIL
     renderUserProfile : (req,res) =>{
+       
      res.render("UserProfile",{
         user:req.session.userLog
      })
     },
     //LOG OUT
     logout:(req,res)=>{
+        res.clearCookie("userEmail")
         req.session.destroy()
         return res.redirect("/")
     }
