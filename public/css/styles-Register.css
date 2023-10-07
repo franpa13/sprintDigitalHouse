@@ -6,10 +6,12 @@
 *{
     box-sizing: border-box;
     border: 0px;
-    padding: 1px;
+ 
 }
 body{
-    border: solid 1px black;
+    /* border: solid 1px ; */
+    padding: 0px;
+    margin: 0px;
 }
 
 /**************** Main ******************/
@@ -19,25 +21,32 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(57,96,155);
-    background: linear-gradient(90deg, rgba(57,96,155,1) 5%, rgba(68,170,170,1) 67%, rgba(182,242,241,1) 95%);
+    background-color: #dcd9fa;
 }
 .Contenedor-Formulario{
     display: flex;
     flex-direction: column;
-    align-items: center;
+ 
 }
 .Imagen-Formulario img{
-    width: 100%;
+    width: 25vw;
+    margin-left: 10vw;
+
 }
 .Imagen-Formulario{
     width:40%;
 }
 
-.Formulario{
-    display: flex;
-    flex-direction: column;
+
+.Formulario p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
 }
+.Formulario p label{
+    font-family: 'Roboto', sans-serif;
+}
+
 input{
     font-weight: 900;
     border-radius: 7%;
@@ -52,20 +61,21 @@ input:hover{
     transform: scale(1.2);
 }
 .Formulario{
-    width: 80%;
+    width: 500vw;
     height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 0px;
-    
+    margin-bottom: 7vw;
+
 }
 .Formulario input{
     width: 30vw;
     font-size: 14px;
     padding: 5px;
-    border:solid 1px black;
+  
     display: flex;
     flex-direction: column;
     margin-top: 5px;
@@ -74,48 +84,55 @@ input:hover{
     background-color:white ;
 }
 
-#text-log-in{
-    margin-bottom: 0px;
-    font-size:30px;
+#text-log-in {
+    margin-top: 100px;
+    font-size: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 900;
-    color: rgb(0, 0, 0);
+    font-weight: 550;
+    color: darkmagenta;
 }
 .Formulario button{
     padding: 7px;
-    border:solid 1px black;
+
     display: flex;
     flex-direction: column;
 }
 .botones{
-    width: 8vw;
-    margin: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 20px;
-    background-color: rgb(0, 0, 255) ;
+    background-color: #490b3d;
     color: white;
     border: none;
+    width:15vw;
     border-radius: 4px;
     cursor: pointer;
-    font-size:15px;
-    color: rgba(255, 255, 255, 0.979);
-    font-weight: 900;
+    font-size: large;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }
 .botones:hover{
-    transform: scale(1.2);
-    background-color: black;
-    color: white;
+
+    background-color: #f1b222;
+    color: black;
+
 }
 .botones-enviar-borrar{
-    width: 20vw;
-    height: 5vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 40vw;
+   display: flex;
+   justify-content: space-around;
   
 }
 
+
+.boton__borrar{
+    background-color:#dcd9fa ;
+    font-weight: 500;
+    font-size: 19px;
+    cursor: pointer;
+}
+.boton__borrar:hover{
+    color: #9e7109;
+}

@@ -3,57 +3,71 @@
 /************************ Footer *************************/
 @import 'footer.css';
 
-*{
+* {
     box-sizing: border-box;
     border: 0px;
-    padding: 1px;
+
 }
-body{
-    border: solid 1px black;
+
+body {
+    /* border: solid 1px ; */
+    padding: 0px;
+    margin: 0px;
 }
+
 /**************** MAIN ************/
-.Main{
+.Main {
     margin: auto;
- }
- .ContenidoCarrusel{
+}
+
+.ContenidoCarrusel {
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 
 }
-.Carrusel{
+
+.Carrusel {
     height: 100%;
     /*position: relative;*/
 }
-#Contenedor-Carrusel{
+
+#Contenedor-Carrusel {
     height: 400px;
     /*overflow: hidden;*/
 }
-#InfoContenido-1{
+
+#InfoContenido-1 {
     display: flex;
 }
-#InfoContenido-1 img{
+
+#InfoContenido-1 img {
     width: 100%;
 }
-#InfoDelLibro{
+
+#InfoDelLibro {
     width: 70%;
     display: flex;
     flex-direction: column;
 }
-#Genero{
+
+#Genero {
     width: 100%;
     border: solid 1px black;
 }
-#Titulo{
+
+#Titulo {
     width: 100%;
     border: solid 1px black;
 }
-#Descripcion{
+
+#Descripcion {
     width: 100%;
     height: 250px;
     border: solid 1px black;
 }
-.ContenedorDeImagen{
+
+.ContenedorDeImagen {
     width: 200px;
 }
