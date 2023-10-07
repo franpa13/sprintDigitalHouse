@@ -6,10 +6,12 @@
 *{
     box-sizing: border-box;
     border: 0px;
-    padding: 1px;
+ 
 }
 body{
-    border: solid 1px black;
+    /* border: solid 1px ; */
+    padding: 0px;
+    margin: 0px;
 }
 /**************** Main ******************/
 

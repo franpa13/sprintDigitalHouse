@@ -24,7 +24,7 @@
                             <i>
                                 <%= errors.Email.msg %>
                             </i>
-                        <% } %>
+                            <% } %>
                                 <p>
                                     <label for="password">Contraseña</label>
                                     <input type="password" name="password" id="password" placeholder="Contraseña"
@@ -33,17 +33,18 @@
                                 </p>
                                 <p class="recordar__usuario">
                                     <label for="recordar__usuario">Recordar mi Usuario</label>
-                                    <input type="checkbox" name="recordar__usuario" id="recordar__usuario">
+                                    <input type="checkbox" id="input__recordar__user"  name="recordar__usuario" id="recordar__usuario">
                                 </p>
 
+                                <p class="boton__logearse">
+                                    <button class="boton" type="submit">Ingresar</button>
 
-                                <button class="boton" type="submit">Enviar</button>
+                                </p>
 
                     </form>
+                    <a href="/registrarse"><button class="boton__register">Registrarse</button></a>
 
-                    <div>
-                        <a href="/registrarse"><button id="Boton-Registrarse">Registrarse</button></a>
-                    </div>
+
 
 
 
