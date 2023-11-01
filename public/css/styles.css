@@ -3,137 +3,65 @@
 /************************ Footer *************************/
 @import 'footer.css';
 
-*{
+* {
     box-sizing: border-box;
     border: 0px;
     padding: 0px;
 }
 body{
-    /* border: solid 1px ; */
+    background-color: #dcd9fa;
     padding: 0px;
     margin: 0px;
 }
-/****************** Main *****************/
-.Main{
-   margin: auto;
+.main{
+    font-family: 'Roboto', sans-serif;
 }
-/************ CARRUSEL ***************/
-#Contenedor-Carrusel{
-    height: 400px;
-    overflow: hidden;
-}
-.Carrusel{
-    height: 100%;
-    position: relative;
-}
-.ContenidoCarrusel{
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
-.FlechasCarrusel{
-    position: absolute;
-    top: 0px;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-#InfoContenido-1{
+.calificaciones {
     display: flex;
 }
-.ContenedorDeImagen{
-    width: 200px;
-}
-#InfoContenido-1 img{
-    width: 100%;
-}
-#Genero{
-    width: 100%;
-    border: solid 1px black;
-}
-#Titulo{
-    width: 100%;
-    border: solid 1px black;
-}
-#Descripcion{
-    width: 100%;
-    height: 250px;
-    border: solid 1px black;
-}
-#InfoDelLibro{
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-}
-#InfoContenido-2{
-    display: flex;
-}
-#InfoContenido-2 img{
-    width: 100%;
-}
-#InfoContenido-3{
-    display: flex;
-}
-#InfoContenido-3 img{
-    width: 100%;
-}
-#InfoContenido-4{
-    display: flex;
-}
-#InfoContenido-4 img{
-    width: 100%;
-}
-a{
-    text-decoration: none;
-    color: black;
-}
-#ContadorPuntos{
-    display: flex;
-    justify-content: space-around;
-    border: solid 1px transparent;
-}
-#ContadorPuntos a{
-    font-size: 1em;
-}
-
-/**************** Calificaciones *****************/
-
-#Calificaciones{
-    padding: 2px;
-    font-size: 14px;
-    display: flex;
-}
-.ContenedorDeTodasLasImagenesEnCalificaciones{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    justify-content: center;
+.main section h3{
+    text-align: center;
+    font-size: 30px;
     
 }
-.ContenedorDeImagen-EnCalificaciones{
+
+
+.img__banner {
     width: 100%;
+    height: 26vw;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+  
+}
+.container a{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 20vw;
 }
-.ContenedorDeImagen-EnCalificaciones img{
-    width: 140px;
-    max-width: 100%;
-    
-}
-.estrellas{
+.container a p{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+.container a p i{
+    color: rgb(54, 204, 54);
+}
+
+.container img {
+    width: 250px;
+    height: 340px;
+}
+
+.container p {
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-.img__banner{
-width: 100%;
-height: 26vw;
+    text-align: center;
+    
 }

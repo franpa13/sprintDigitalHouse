@@ -65,7 +65,8 @@
         "precio": "$ 16.000",
         "editorial": "Editorial Sudamericana",
         "idioma": "Español",
-        "cantidad": "10"
+        "cantidad": "10",
+        "clasificacion": "2"
     },
     {
         "id": "6",
@@ -77,7 +78,8 @@
         "precio": "$ 12.600",
         "editorial": "Secker and Warburg",
         "idioma": "Inglés",
-        "cantidad": "10"
+        "cantidad": "10",
+        "clasificacion": "3"
     },
     {
         "id": "7",
@@ -89,7 +91,8 @@
         "precio": "$ 11.000",
         "editorial": "J.B. Lippincott & Co.",
         "idioma": "Inglés",
-        "cantidad": "10"
+        "cantidad": "10",
+        "clasificacion": "4"
     },
     {
         "id": "8",
@@ -101,7 +104,8 @@
         "precio": "$ 12.990",
         "editorial": "Charles Scribner's Sons",
         "idioma": "Inglés",
-        "cantidad": "10"
+        "cantidad": "10",
+        "clasificacion": "2"
     },
     {
         "id": "9",
@@ -113,7 +117,8 @@
         "precio": "$ 12.000",
         "editorial": "Thomas Egerton",
         "idioma": "Inglés",
-        "cantidad": "10"
+        "cantidad": "10",
+        "clasificacion": "3"
     },
     {
         "id": "10",
@@ -125,7 +130,8 @@
         "precio": "$ 9000",
         "editorial": "Scholastic",
         "idioma": "Inglés",
-        "cantidad": "10"
+        "cantidad": "10",
+        "clasificacion": "4"
     },
     {
         "id": "11",
@@ -137,7 +143,8 @@
         "precio": "$ 500",
         "editorial": "Allen & Unwin",
         "idioma": "Inglés",
-        "cantidad": "10"
+        "cantidad": "10",
+        "clasificacion": "3"
     },
     {
         "id": "12",
@@ -149,7 +156,8 @@
         "precio": "$ 11.000",
         "editorial": "Editorial La Oveja Negra",
         "idioma": "Español",
-        "cantidad": "10"
+        "cantidad": "10",
+        "clasificacion": "5"
     },
     {
         "id": "13",
@@ -161,7 +169,8 @@
         "precio": "$ 17.070",
         "editorial": "Richard Bentley",
         "idioma": "Inglés",
-        "cantidad": "10"
+        "cantidad": "10",
+        "clasificacion": "3"
     },
     {
         "id": "14",
@@ -173,7 +182,8 @@
         "precio": "$ 11.500",
         "editorial": "Editorial El Bazar",
         "idioma": "Ruso",
-        "cantidad": "10"
+        "cantidad": "10",
+        "clasificacion": "2"
     },
     {
         "id": "15",
@@ -185,7 +195,8 @@
         "precio": "$ 12.900",
         "editorial": "Shakespeare and Company",
         "idioma": "Inglés",
-        "cantidad": "10"
+        "cantidad": "10",
+        "clasificacion": "4"
     },
     {
         "id": "16",
@@ -197,7 +208,8 @@
         "precio": "$ 18.690",
         "editorial": "DAW Books",
         "idioma": "Inglés",
-        "cantidad": "10"
+        "cantidad": "10",
+        "clasificacion": "5"
     },
     {
         "id": "17",
@@ -209,7 +221,8 @@
         "precio": "$ 11.550",
         "editorial": "Alianza Editorial",
         "idioma": "Inglés",
-        "cantidad": "10"
+        "cantidad": "10",
+        "clasificacion": "2"
     },
     {
         "id": "18",
@@ -221,7 +234,8 @@
         "precio": "$ 9.999",
         "editorial": "Macmillan",
         "idioma": "Inglés",
-        "cantidad": "10"
+        "cantidad": "10",
+        "clasificacion": "4"
     },
     {
         "id": "19",
@@ -233,30 +247,20 @@
         "precio": "$ 23.000",
         "editorial": "Haymarket Books",
         "idioma": "Inglés",
-        "cantidad": "10"
+        "cantidad": "10",   
+            "clasificacion": "4"
     },
     {
-        "id": "1693839051787",
-        "titulo": "213",
-        "descripcion": "231",
-        "genero": "231",
-        "img": "img-1693839636435.jpg",
-        "autor": "213",
-        "precio": "321",
-        "editorial": "231",
-        "idioma": "321",
-        "cantidad": "231"
-    },
-    {
-        "id": "1696429415161",
-        "titulo": "harry potter",
-        "descripcion": "holaaaa",
-        "genero": "ficcion",
-        "img": "img-1696429415155.jpg",
-        "autor": "frean",
-        "precio": 4154,
+        "id": "1698842527679",
+        "titulo": "holaaaa",
+        "descripcion": "no see que poner",
+        "genero": "accion",
+        "img": "img-1698842527673.png",
+        "autor": "fran paredes",
+        "precio": 5000,
         "editorial": "dh",
         "idioma": "español",
-        "cantidad": 45
+        "cantidad": 7,
+        "clasificacion": "2"
     }
 ]

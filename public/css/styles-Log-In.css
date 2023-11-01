@@ -4,13 +4,15 @@
 @import 'footer.css';
 
 * {
-    box-sizing: border-box;
-    border: 0px;
-    padding: 0px;
+        box-sizing: border-box;
+        border: 0px;
+        padding: 0px;
+    
+    font-family: 'Roboto', sans-serif;
 }
 
-body {
-    /* border: solid 1px ; */
+body{
+    background-color: #dcd9fa;
     padding: 0px;
     margin: 0px;
 }
@@ -145,4 +147,30 @@ font-weight: 80;
 }
 .boton__register:hover{
     color: #9e7109;
+}
+/* PERFFIL */
+
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.profile-picture {
+    max-width: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+.user-details {
+    text-align: center;
+    margin-top: 20px;
+}
+h1 {
+    font-size: 24px;
+}
+p {
+    font-size: 18px;
 }

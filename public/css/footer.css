@@ -1,4 +1,8 @@
-
+body{
+    background-color: #dcd9fa;
+    padding: 0px;
+    margin: 0px;
+}
 .Contenedor-Footer{
     height: 100%;
     background-color: #490b3d;

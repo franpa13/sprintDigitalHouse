@@ -15,10 +15,11 @@ const homeController = {
     },
     search: (req, res) => {
         const { keywords } = req.query;
-
-        const libroBuscado = arrLibros.filter((libro) => libro.titulo.toLowerCase().includes(keywords.toLowerCase()));
-
-        res.render('resultado', { resultado: libroBuscado });
+            const libroBuscado = arrLibros.filter((libro) => libro.titulo.toLowerCase().includes(keywords.toLowerCase()));
+            
+            res.render('resultado', { resultado: libroBuscado });
+            console.log(libroBuscado);
+    
     },
     /**** INICIAR SESION ****/
     renderIniciarSesion: (req, res) => {

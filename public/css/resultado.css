@@ -3,61 +3,94 @@
 /************************ Footer *************************/
 @import 'footer.css';
 
-*{
-    box-sizing: border-box;
-    border: 0px;
 
-}
-body{
-    /* border: solid 1px ; */
-    padding: 0px;
-    margin: 0px;
-}
-/**************** MAIN ************/
-.Main{
-    margin: auto;
- }
- .ContenidoCarrusel{
-    height: 100%;
+.body{
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap; 
+    margin: 50px;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+
+        background-color: #dcd9fa;
+        padding: 0px;
+        margin: 0px;
+
+ } 
+ 
+.libro__card {
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: #dcd9fa;
+    display: flex;
+    justify-content: center;
     align-items: center;
-
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding: 10px;
+    width: 200px;
 }
-.Carrusel{
-    height: 100%;
-    /*position: relative;*/
-}
-#Contenedor-Carrusel{
-    height: 400px;
-    /*overflow: hidden;*/
-}
-#InfoContenido-1{
+.container__img{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#InfoContenido-1 img{
+
+.container__img img {
+    max-width: 100%;
+    height: 22vw;
+    border-radius: 10px;
+}
+
+.info__libro {
+    margin-top: 10px;
+}
+
+.descripcion {
+    width: 110%;
+    font-style: italic;
+    font-size: 15px;
+   display: none;
+}
+
+.mostrar-descripcion {
     width: 100%;
+    height: 35px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
-#InfoDelLibro{
-    width: 70%;
+.mostrar__descripcion{
+    display: block;
+}
+
+.description{
+    margin: 10px 10px 40px 10px ;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: 13%;
     display: flex;
     flex-direction: column;
 }
-#Genero{
-    width: 100%;
-    border: solid 1px black;
-}
-#Titulo{
-    width: 100%;
-    border: solid 1px black;
-}
-#Descripcion{
-    width: 100%;
-    height: 250px;
-    border: solid 1px black;
-}
-.ContenedorDeImagen{
-    width: 200px;
+
+/* .libro__img{
+    
+    border: 1px solid;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vw;
 }
 
-
+.container__img img{
+    width: 100%;
+    height: 22vw;
+}
+.body{
+   display: flex;
+   flex-wrap: wrap; 
+   justify-content: space-around;
+} */
