@@ -6,10 +6,10 @@
 *{
     box-sizing: border-box;
     border: 0px;
- 
+    font-family: 'Roboto', sans-serif;
 }
 body{
-    /* border: solid 1px ; */
+    background-color: #dcd9fa;
     padding: 0px;
     margin: 0px;
 }

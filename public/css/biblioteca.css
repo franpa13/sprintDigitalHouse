@@ -6,68 +6,110 @@
 * {
     box-sizing: border-box;
     border: 0px;
-
+    padding: 0px;
 }
 
 body {
-    /* border: solid 1px ; */
+    background-color: #dcd9fa;
+}
+
+body {
     padding: 0px;
     margin: 0px;
+    /* border: solid 1px ; */
 }
 
-/**************** MAIN ************/
-.Main {
-    margin: auto;
-}
-
-.ContenidoCarrusel {
-    height: 100%;
+.body {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.body h4 {
+    margin: 20px;
+}
+
+.libro__card {
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: #dcd9fa;
+    display: flex;
+    justify-content: center;
     align-items: center;
-
+    flex-direction: column;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: 200px;
 }
 
-.Carrusel {
-    height: 100%;
-    /*position: relative;*/
-}
-
-#Contenedor-Carrusel {
-    height: 400px;
-    /*overflow: hidden;*/
-}
-
-#InfoContenido-1 {
+.container__img {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-items: center;
 }
 
-#InfoContenido-1 img {
+.container__img img {
+    max-width: 100%;
+    height: 22vw;
+    border-radius: 10px;
+}
+
+.info__libro {
+    margin-top: 10px;
+}
+
+.descripcion {
+    width: 110%;
+
+    font-style: italic;
+    font-size: 15px;
+    display: none;
+}
+
+.mostrar-descripcion {
     width: 100%;
+    height: 35px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
-#InfoDelLibro {
-    width: 70%;
+
+.description {
+
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: 13%;
     display: flex;
     flex-direction: column;
 }
 
-#Genero {
-    width: 100%;
-    border: solid 1px black;
+/* section{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-#Titulo {
-    width: 100%;
-    border: solid 1px black;
+.card__libro{
+    display: flex;
 }
+.container{
 
-#Descripcion {
     width: 100%;
-    height: 250px;
-    border: solid 1px black;
 }
-
-.ContenedorDeImagen {
-    width: 200px;
+.ContenedorDeImagen{
+    width: 10vw ;
 }
+.ContenedorDeImagen img{
+    width: 100px;
+} */

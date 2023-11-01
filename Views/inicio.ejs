@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('./partials/head') %>
-    <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
 
     <!------ HEADER ------>
     <%- include('./partials/header') %>
 
 
-    <main class="Main">
-      
-          
-     <section>
-        <img class="img__banner" src="/images/Banner.png" alt="">
-         <h3>Calificaciones:</h3>
-        <div id="Calificaciones">
-            <% clasificaciones.forEach((clasificacion) => { %>
-            <div class="ContenedorDeTodasLasImagenesEnCalificaciones">
-            <div class="ContenedorDeImagen-EnCalificaciones"><a href="/biblioteca/detalle/<%= clasificacion.id %>"><img src="/images/<%= clasificacion.img%>" alt="<%= clasificacion.titulo %>"><div class="estrellas"><p><%= clasificacion
-                .clasificacion%></p><i class="fa-solid fa-star"></i></a></div></div></div>
-            <% }) %>
-        </div>
-     </section>
-    </main>
-    <!---- FOOTER-->
-    <%- include('./partials/footer') %>
+        <main class="main">
+            <section>
+                <img class="img__banner" src="/images/Banner.png" alt="">
+                <h3>Mejores Calificaciones:</h3>
+                <div class="calificaciones">
+                    
+                    <div class="container">
+                            <% clasificaciones.forEach((clasificacion)=> { %>
+                            <a href="/biblioteca/detalle/<%= clasificacion.id %>"><img
+                                    src="/images/<%= clasificacion.img%>" alt="<%= clasificacion.titulo %>">
+
+                                <p>
+                                    <%= clasificacion .clasificacion%>
+                                        <i class="fa-solid fa-star"></i>
+                                </p>
+                            </a>
+                            <% }) %>
+                        </div>
+
+                </div>
+                    </div>
+            </section>
+        </main>
+        <!---- FOOTER-->
+        <%- include('./partials/footer') %>
 </body>
+
 </html
