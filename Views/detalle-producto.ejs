@@ -12,16 +12,18 @@
  <main>
     <section class="detalle">
             <div class="informacion">
-                    <img src="/images/<%= libroLista.img %>" alt="<%= libroLista.titulo %>">
+                    <img src="/images/<%= libroLista.image %>" alt="<%= libroLista.title %>">
                     <div class="info">
-                        <h3 classs="titulo"><%= libroLista.titulo %></h3>
+                        <h3 classs="titulo"><%= libroLista.title %></h3>
+
+
                         <div class="bookinf">
                             <p>Autor: <%= libroLista.autor %></p>
                             <p>Editorial: <%= libroLista.editorial %></p>
                         </div>
                         <div class="prices">
                             <div class="compra">
-                                <p>Precio: $<%= libroLista.precio %></p>
+                                <p>Precio: $<%= libroLista.price %></p>
                                 <a href="" class="carro">Agregar al carro</a>
                             </div>
                             <div class="pago">
@@ -34,7 +36,8 @@
                             <p>Número: XXXXXX</p>
                             <p>Peso: XXXXXX</p>
                             <p>Edición: XXXXXX</p>
-                            <p>Idioma: <%= libroLista.idioma %></p>
+                            <p>Idioma: <%= libroLista.language %></p>
+
                         </div>
                     </div>
                 </div>

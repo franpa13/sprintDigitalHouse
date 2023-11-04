@@ -31,12 +31,12 @@ const validateRegister = async (req, res, next) => {
             // Crear un nuevo usuario en la base de datos
             const newUser = await db.Clients.create({
                 email: req.body.Email,
-                password: hashSync(req.body.password, 10) ,// Usar el hash del password
+                password: hashSync(req.body.password, 10),// Usar el hash del password
                 username: req.body.NombreUsuario,
-                image:req.file.filename,
-                // Otras propiedades que deseas incluir
+                image: req.file.filename,
+
             });
-          
+
 
             // Puedes asignar valores de la sesión aquí si lo deseas
             // req.session.userLogged = newUser;
