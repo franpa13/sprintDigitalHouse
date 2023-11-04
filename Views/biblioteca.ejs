@@ -20,15 +20,15 @@
 
                     <div class="libro__card">
                         <div class="container__img">
-                            <a href=""> <img src="/images/<%= libros.img %>" alt="<%= libros.titulo %>"></a>
+                            <a href=""> <img src="/images/<%= libros.image %>" alt="<%= libros.titulo %>"></a>
                         </div>
                         <div class="info__libro">
-                            <div class="genero">
-                                <h4>GENERO: <%= libros.genero %>
+                            <div class="titulo">
+                                <h4>TITULO: <%= libros.title %>
                                 </h4>
                             </div>
-                            <div class="titulo">
-                                <h4>TITULO: <%= libros.titulo %>
+                            <div class="genero">
+                                <h4>GENERO: <%= libros.genre %>
                                 </h4>
                             </div>
 
@@ -37,7 +37,7 @@
                     <div class="description">
                         <div class="descripcion">
                             <h4>
-                                <%= libros.descripcion %>
+                                <%= libros.description %>
                             </h4>
                         </div>
                         <button class="mostrar-descripcion">Mostrar Descripción</button>
