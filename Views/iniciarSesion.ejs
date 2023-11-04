@@ -20,17 +20,18 @@
                             <label for="Email">Email</label>
                             <input type="email" name="Email" id="Email" placeholder="Ingrese su email">
                         </p>
-                        <% if(locals.errors && errors.Email){%>
-                            <i>
-                                <%= errors.Email.msg %>
-                            </i>
-                            <% } %>
+                       
                                 <p>
                                     <label for="password">Contraseña</label>
                                     <input type="password" name="password" id="password" placeholder="Contraseña"
                                         required pattern=".{4,}"
                                         title="La Contraseña debe contener al menos cuatro caracteres.">
                                 </p>
+                                <% if(locals.errors && errors.Email){%>
+                                    <i>
+                                        <%= errors.Email.msg %>
+                                    </i>
+                                    <% } %>
                                 <p class="recordar__usuario">
                                     <label for="recordar__usuario">Recordar mi Usuario</label>
                                     <input type="checkbox" id="input__recordar__user"  name="recordar__usuario" id="recordar__usuario">

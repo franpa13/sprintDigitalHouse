@@ -4,11 +4,15 @@ const path = require('path');
 const libros = require('../baseDatos/libros');
 const librosPath = path.join(__dirname, '../baseDatos/libros.json')
 console.log(librosPath)
-
+const db = require("../database/models")
 const bibliotecaController = {
     /**** BIBLIOTECA ****/
-    render : (req, res)=>{
-        res.render("biblioteca", {datos: libros})
+    render :  (req, res)=>{
+        db.Products.findAll()
+        .then((libros)=>{
+
+            res.render("biblioteca", {datos: libros})
+        })
     },
     /**** CREAR ****/
     renderCrearProductos : (req, res) => {

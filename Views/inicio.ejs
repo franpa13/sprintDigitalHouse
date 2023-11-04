@@ -13,6 +13,7 @@
 
 
         <main class="main">
+       
             <section>
                 <img class="img__banner" src="/images/Banner.png" alt="">
                 <h3>Mejores Calificaciones:</h3>
@@ -21,10 +22,10 @@
                     <div class="container">
                             <% clasificaciones.forEach((clasificacion)=> { %>
                             <a href="/biblioteca/detalle/<%= clasificacion.id %>"><img
-                                    src="/images/<%= clasificacion.img%>" alt="<%= clasificacion.titulo %>">
+                                    src="/images/<%= clasificacion.image%>" alt="<%= clasificacion.title %>">
 
                                 <p>
-                                    <%= clasificacion .clasificacion%>
+                                    <%= clasificacion .calification%>
                                         <i class="fa-solid fa-star"></i>
                                 </p>
                             </a>

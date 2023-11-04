@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <%- include('./partials/head') %>
-    
-    <link rel="stylesheet" href="/css/styles-Log-In.css">
-    <title>Document</title>
+
+        <link rel="stylesheet" href="/css/styles-Log-In.css">
+        <title>Document</title>
 </head>
+
 <body>
     <%- include('./partials/header') %>
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Perfil de Usuario</title>
-       
-    </head>
-    <body>
-        <div class="profile-container">
-            <img src="/images/imageUsers/<%= user.image %>" alt="Foto de perfil" class="profile-picture">
-            <div class="user-details">
-                <h1><%= user.NombreUsuario %></h1>
-                <p><%= user.Email %></p>
+        <!DOCTYPE html>
+        <html>
+
+        <head>
+            <title>Perfil de Usuario</title>
+
+        </head>
+
+        <body>
+            <div class="profile-container">
+                <div class="user-details">
+                    <img src="/images/imageUsers/<%= user.image %>" alt="Foto de perfil" class="profile-picture">
+                    <h1>
+                        <%= user.username %>
+                    </h1>
+                    <p>
+                        <%= user.email %>
+                    </p>
+                </div>
             </div>
-        </div>
-    </body>
-    </html>
-    
+        </body>
+
+        </html>
+
 
 </body>
-</html>
 
+</html>

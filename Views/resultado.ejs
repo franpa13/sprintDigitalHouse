@@ -19,24 +19,27 @@
                 <% if (resultado.length> 0) { %>
                     <% resultado.forEach((libro, index)=> { %>
                         <div class="libro__card">
-                            <div class="container__img">
-                                <img src="/images/<%= libro.img %>" alt="<%= libro.titulo %>">
-                            </div>
+                            <a href="/biblioteca/detalle/<%= libro.id %>">
+                                <div class="container__img">
+                                    <img src="/images/<%=libro.image %>" alt="<%= libro.title %>">
+                                </div>
+                            </a>
                             <div class="info__libro">
-                                <div class="genero">
-                                    <h4>GENERO: <%= libro.genero %>
+                                <div class="titulo">
+                                    <h4>TITULO: <%= libro.title %>
                                     </h4>
                                 </div>
-                                <div class="titulo">
-                                    <h4>TITULO: <%= libro.titulo %>
+                                <div class="genero">
+                                    <h4>GENERO: <%= libro.Genres.name %>
                                     </h4>
                                 </div>
 
                             </div>
+
                         </div>
                         <div class="description">
                             <div class="descripcion" id="descripcion_<%= index %>">
-                                <h4>DESCRIPCION: <%= libro.descripcion %>
+                                <h4>DESCRIPCION: <%= libro.description %>
                                 </h4>
                             </div>
                             <button class="mostrar-descripcion" id="mostrar-descripcion_<%= index %>">Mostrar

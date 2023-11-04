@@ -6,19 +6,23 @@
 
 .body{
     display: flex;
+   
     flex-wrap: wrap; 
     margin: 50px;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
-
-        background-color: #dcd9fa;
-        padding: 0px;
-        margin: 0px;
+    background-color: #dcd9fa;
+    padding: 0px;
+    margin: 0px;
 
  } 
- 
+ h2{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+ }
 .libro__card {
-    border: 1px solid #ffffff;
+    
     border-radius: 10px;
     background-color: #dcd9fa;
     display: flex;
@@ -37,12 +41,15 @@
 }
 
 .container__img img {
-    max-width: 100%;
+    width: 14.5vw;
     height: 22vw;
     border-radius: 10px;
 }
 
 .info__libro {
+    background-color: #b9b9b9;
+    border-radius: 10px;
+    padding: 5px;
     margin-top: 10px;
 }
 

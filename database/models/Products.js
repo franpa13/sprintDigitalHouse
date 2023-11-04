@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes ) => {
             title : {
                 type: DataTypes.STRING(255),
             },
+          
             editorial : {
                 type: DataTypes.STRING(255),
             },
@@ -43,15 +44,25 @@ module.exports = (sequelize, DataTypes ) => {
             },
             autor : {
                 type: DataTypes.STRING(150),
-            }
-    };
+            },
+            id_genre: {
+                type: DataTypes.INTEGER(11).UNSIGNED,
+                references: {
+                    model: "Genres", 
+                    key: "id",
+                },
+    }};
 
     const config = {
         tableName: "products",
-        timesTamps: false
+        timestamps: false
     }
 
-    let Products = sequelize.define( alias, cols, config )
+    let Products = sequelize.define( alias, cols, config );
 
+    Products.associate = (models) => {
+        Products.belongsTo(models.Genres, { foreignKey: "id_genre", as: "Genres" });
+    };
+    
     return Products;
 }

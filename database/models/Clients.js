@@ -13,12 +13,7 @@ module.exports = (sequelize, DataTypes ) => {
                 primaryKey: true,
                 autoIncrement: true,
             },
-            name : {
-                type: DataTypes.STRING(100),
-            },
-            last_name : {
-                type: DataTypes.STRING(100),
-            },
+            
             email : {
                 type: DataTypes.STRING(150),
             },
@@ -26,13 +21,16 @@ module.exports = (sequelize, DataTypes ) => {
                 type: DataTypes.STRING(255),
             },
             username : {
+                type: DataTypes.STRING(100),
+            },
+            image: {
                 type: DataTypes.STRING(255),
             }
     };
 
     const config = {
+        timestamps: false,
         tableName: "clients",
-        timesTamps: false
     }
 
     let clients = sequelize.define( alias, cols, config )
