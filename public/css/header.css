@@ -7,6 +7,7 @@
    justify-content: center;
    flex-direction: column;
    text-align: center;
+
 }
 
 .Contenedor-Icono-Perfil p strong {
@@ -81,18 +82,19 @@
 .Contenedor-BarraDeBusqueda-Lupa {
    width: 35%;
    display: flex;
-   justify-content: center;
+   margin-left: 25px;
+   justify-content: flex-start;
    align-items: center;
 
 }
-.Contenedor-BarraDeBusqueda-Lupa form{
+/* .Contenedor-BarraDeBusqueda-Lupa form{
    margin-left: 3vw;
-}
+} */
 
 .Contenedor-BarraDeBusqueda-Lupa input {
    width: 20vw;
    display: flex;
-   margin-left: 10vw;
+   /* margin-left: 10vw; */
   align-items: center;
   background-color: #f1f1f1; 
   border-radius: 20px; 
@@ -142,7 +144,7 @@ form {
    width: 100%;
    height: 8vw;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
    flex-wrap: wrap;
 }
@@ -247,7 +249,7 @@ a {
 }
 
 .register__log {
-   width: 18vw;
+   width: 12vw;
    display: flex;
    justify-content: space-around;
 }
@@ -258,8 +260,9 @@ a {
    text-align: center;
    font-weight: 650;
    width: 45%;
-   font-size: 17px;
+   font-size: 15px;
    border: 2px solid;
+   padding: 5px;
 }
 .register__log a:hover{
    background-color: #f1b222;

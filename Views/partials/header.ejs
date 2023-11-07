@@ -13,9 +13,6 @@
             </form>
         </div>
 
-        <div class="Contenedor-Icono-Notificacion">
-            <button id="Icono-Notificacion" type="submit"><i class="fa-regular fa-bell"></i></button>
-        </div>
         <% if(locals.isLogged) {%>
             <div class="Contenedor-Icono-Perfil">
                 <a href="/UserProfile"> <img class="foto__perfil" src="/images/imageUsers/<%= locals.userLog.image %>"
@@ -60,5 +57,5 @@
         </ul>
 
     </nav>
-  
+
 </header>

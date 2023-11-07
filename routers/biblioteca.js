@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
-
+const authMiddleware  = require("../middlewares/authMiddleware")
 const bibliotecaController = require('../controllers/BibliotecaController');
 /*const { route } = require('./inicio');*/
 
@@ -24,18 +24,18 @@ const upload = multer({ storage })
 router.get('/', bibliotecaController.render);
 
 /**** CREAR ****/
-router.get('/CreacionDeProductos', bibliotecaController.renderCrearProductos);
+router.get('/CreacionDeProductos',authMiddleware ,  bibliotecaController.renderCrearProductos);
 router.post('/CreacionDeProductos',upload.single("img"), bibliotecaController.crear);
 
 /**** DETALLE ****/
 router.get('/detalle/:id', bibliotecaController.renderDetalle);
 
 /**** EDITAR ****/
-router.get('/editar/:id', bibliotecaController.rendermodificarProductos);
+router.get('/editar/:id', authMiddleware ,  bibliotecaController.rendermodificarProductos);
 router.put('/editar/:id', upload.single("img"), bibliotecaController.editando);
 
 /**** ELIMINAR ****/
-router.delete('/delete/:id', bibliotecaController.eliminar);
+router.delete('/delete/:id',authMiddleware ,  bibliotecaController.eliminar);
 
 module.exports = router;
 
