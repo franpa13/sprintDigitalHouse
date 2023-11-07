@@ -1,68 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%- include('./partials/head') %>
-    <link rel="stylesheet" href="/css/styles-detalle.css">
-</head>
+
+
 <body>
+
+    <head>
+        <%- include('./partials/head') %>
+            <link rel="stylesheet" href="/css/styles-detalle.css">
+    </head>
 
     <!------ HEADER ------>
     <%- include('./partials/header') %>
-    
- <main>
-    <section class="detalle">
-            <div class="informacion">
-                    <img src="/images/<%= libroLista.image %>" alt="<%= libroLista.title %>">
-                    <div class="info">
-                        <h3 classs="titulo"><%= libroLista.title %></h3>
 
+        <main>
+            <div>
+                <section class="detalle">
+                    <div>
+                        <img class="img" src="/images/<%= libroLista.image %>" alt="<%= libroLista.title %>">
 
-                        <div class="bookinf">
-                            <p>Autor: <%= libroLista.autor %></p>
-                            <p>Editorial: <%= libroLista.editorial %></p>
-                        </div>
-                        <div class="prices">
-                            <div class="compra">
-                                <p>Precio: $<%= libroLista.price %></p>
-                                <a href="" class="carro">Agregar al carro</a>
+                        <div class="todo__inf">
+                            <div class="bookinf">
+                                <h3 classs="titulo">
+                                    <%= libroLista.title %>
+                                </h3>
+                                <p>Autor: <%= libroLista.autor %>
+                                </p>
+                                <p>Editorial: <%= libroLista.editorial %>
+                                </p>
                             </div>
-                            <div class="pago">
-                                <p>Medio de Pago: XXXXXXXXX</p>
-                                <p>Costo de Envio: XXXXXXXXX</p>
-                            </div>
-                        </div>
-                        <p class="tags">Etiquetas: XXXXXX, XXXXXX, XXXXXX, XXXXXX</p>
-                        <div class="book-detail">
-                            <p>Número: XXXXXX</p>
-                            <p>Peso: XXXXXX</p>
-                            <p>Edición: XXXXXX</p>
-                            <p>Idioma: <%= libroLista.language %></p>
 
+                            <div class="prices">
+                                <div class="compra">
+                                    <p>Precio: </br>
+                                        $<%= libroLista.price %> </p>
+                                </div>
+                                <div class="pago">
+                                    <p>Medio de Pago:</p>
+                                    <p> Mercado Pago</p>
+                                    <p> Debito</p>
+                                    <p> Credito</p>
+                                    <p>Costo de Envio: $500</p>
+                                </div>
+                            </div>
+
+
+                            <div class="book-detail">
+
+                                <p>Número: <%= libroLista.id %>
+                                </p>
+                                <p>Edición: 2020</p>
+                                <p>Idioma: <%= libroLista.language %>
+                                </p>
+                            </div>
+
+                            <a href="" class="carro"><button>Agregar al carro</button></a>
                         </div>
+
                     </div>
-                </div>
-            </section>
-            <section class="comentario-reseña">
-                <div class="reseña">
-                    <span class="review1">Reseñas: </span>
-                    <span class="review2"></span>
-                </div>
-                <div class="comentario">
-                    <span class="comment1">Comentarios: </span>
-                    <span class="comment2"></span>
-                </div>
-            </section>
-            <div>
-                <a href="/biblioteca/editar/<%= libroLista.id %>" ><button class="boton-modificar">Modificar Producto</button></a>
+                    <div class="comentarios">
+
+                        <section class="btns">
+                            <div>
+                                <a href="/biblioteca/editar/<%= libroLista.id %>"><button class="boton-modificar">Modificar
+                                        Producto</button></a>
+                            </div>
+                            <div>
+                                <form action="/biblioteca/delete/<%= libroLista.id %>?_method=DELETE" method="POST">
+                                    <button class="boton-modificar" type="submit">Eliminar</button>
+                                </form>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+
+                
             </div>
-            <div>
-                <form action="/biblioteca/delete/<%= libroLista.id %>?_method=DELETE" method="POST">
-                    <button class="boton-modificar" type="submit">Eliminar</button>
-                </form>
-            </div>
-</main>
+        </main>
 
         <!---- FOOTER-->
         <%- include('./partials/footer') %>
-    </body>
+</body>
+
 </html>

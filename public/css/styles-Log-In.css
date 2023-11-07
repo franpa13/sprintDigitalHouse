@@ -4,14 +4,13 @@
 @import 'footer.css';
 
 * {
-        box-sizing: border-box;
-        border: 0px;
-        padding: 0px;
-    
+    box-sizing: border-box;
+    border: 0px;
+    padding: 0px;
     font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
     background-color: #dcd9fa;
     padding: 0px;
     margin: 0px;
@@ -55,17 +54,21 @@ body{
     justify-content: center;
     align-items: center;
 }
-#Formulario p{
+
+#Formulario p {
     font-family: 'Roboto', sans-serif;
 }
-#Formulario p label{
+
+#Formulario p label {
     font-family: 'Roboto', sans-serif;
     color: black;
 }
+
 #Formulario i {
     color: red;
     font-weight: bold;
 }
+
 .Contenedor-Formulario input {
     padding: 5px;
     border: solid 1px black;
@@ -85,7 +88,7 @@ body{
 
 .Contenedor-Formulario button {
     padding: 7px;
-    
+
 }
 
 
@@ -119,38 +122,44 @@ label {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
 }
-.boton__logearse{
+
+.boton__logearse {
     width: 25vw;
     display: flex;
     justify-content: center;
 }
-.boton:hover{
+
+.boton:hover {
     background-color: #f1b222;
     color: #490b3d;
 }
-.recordar__usuario{
+
+.recordar__usuario {
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
     align-items: center;
     text-align: center;
 }
-.recordar__usuario label{
-font-weight: 80;
+
+.recordar__usuario label {
+    font-weight: 80;
 }
 
-#input__recordar__user{
+#input__recordar__user {
     width: 20px;
 }
 
-.boton__register{
-    background-color:#dcd9fa ;
+.boton__register {
+    background-color: #dcd9fa;
     font-weight: 700;
     font-size: 19px;
 }
-.boton__register:hover{
+
+.boton__register:hover {
     color: #9e7109;
 }
+
 /* PERFFIL */
 
 .profile-container {
@@ -160,22 +169,26 @@ font-weight: 80;
     flex-direction: column;
     align-items: start;
 }
+
 .profile-picture {
     border-radius: 10px;
-  width: 10vw;
+    width: 10vw;
 }
+
 .user-details {
-    background-color:#dcd9fa;
+    background-color: #dcd9fa;
     margin-left: 20px;
     text-align: center;
     margin-top: 20px;
     padding: 30px;
     border-radius: 10px;
 }
+
 h1 {
     font-size: 24px;
 }
+
 p {
-    color:rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
     font-size: 15px;
 }

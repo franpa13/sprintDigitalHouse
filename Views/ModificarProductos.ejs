@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('./partials/head') %>
-    <link rel="stylesheet" href="/css/styles-CrearProductos.css">
+        <link rel="stylesheet" href="/css/styles-CrearProductos.css">
 </head>
+
 <body>
     <!------ HEADER ------>
-        <%- include('./partials/header') %>
+    <%- include('./partials/header') %>
 
         <main>
             <div>
                 <h1>Usuario Administrador</h1>
-                <h3>Estar editando: <%= editar.titulo %></h3>
+                <h3>Estas editando: <%= editar.title %>
+                </h3>
             </div>
             <form action="/biblioteca/editar/<%= editar.id %>?_method=put" method="post" enctype="multipart/form-data">
-                    <label for="titulo">Título:</label>
-                    <input type="text" name="titulo" value="<%=editar.titulo %>" required><br>
-            
-                    <label for="descripcion">Descripción:</label>
-                    <textarea name="descripcion" rows="4" cols="50" required><%=editar.descripcion %></textarea><br>
-            
-                    <label for="genero">Género:</label>
-                    <input type="text" name="genero" value="<%=editar.genero %>" required><br>
-            
-                    <label for="img">Imagen:</label>
-                    <input type="file" name="img" accept=".png, .jpg, .jpeg" ><br>
-            
-                    <label for="autor">Autor:</label>
-                    <input type="text" name="autor" value="<%=editar.autor %>" required><br>
-            
-                    <label for="precio">Precio:</label>
-                    <input type="number" name="precio" step="0.01" value="<%=editar.precio %>" required><br>
-            
-                    <label for="editorial">Editorial:</label>
-                    <input type="text" name="editorial" value="<%=editar.editorial %>" required><br>
-            
-                    <label for="idioma">Idioma:</label>
-                    <input type="text" name="idioma" value="<%=editar.idioma %>" required><br>
-            
-                    <label for="cantidad">Cantidad:</label>
-                    <input type="number" name="cantidad" value="<%=editar.cantidad %>" required><br>
-            
-                    <input type="submit" value="Guardar Libro">
+              
+                <section class="primer__parte">
+                    <div>
+                        <label for="titulo">Título:</label>
+                        <input type="text" name="titulo" placeholder="<%=editar.title %>" required>
+                    </div>
+                    <div>
+                        <label for="descripcion">Descripción:</label>
+                        <textarea name="descripcion" rows="4" cols="50" required><%=editar.description %></textarea>
+                    </div>
+                    <div>
+                        <label for="genero">Género:</label>
+                        <select name="genero" required>
+                            <option>
+                                <%= editar.Genres ? editar.Genres.name : '' %>
+                            </option>
+                            <% generos.forEach((genero)=> { %>
+                                <option>
+                                    <%= genero.name %>
+                                </option>
+                                <% }); %>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="img">Imagen:</label>
+                        <input type="file" name="img" accept=".png, .jpg, .jpeg" required>
+                    </div>
+                </section>
+                <section class="segunda__parte">
+                    <div>
+                        <label for="autor">Autor:</label>
+                        <input type="text" name="autor" placeholder="<%= editar.autor %>" required>
+                    </div>
+                    <div>
+                        <label for="precio">Precio:</label>
+                        <input type="number" name="precio" placeholder="<%=editar.price %>" step="0.01" required>
+                    </div>
+                    <div>
+                        <label for="editorial">Editorial:</label>
+                        <input type="text" name="editorial" placeholder="<%=editar.editorial %>" required>
+                    </div>
+                    <div>
+                        <label for="idioma">Idioma:</label>
+                        <input type="text" name="idioma" placeholder="<%= editar.language %>" required>
+                    </div>
+                    <div>
+                        <label for="cantidad">Cantidad:</label>
+                        <input type="number" name="cantidad" placeholder="<%=  editar.stock %>" required>
+                    </div>
+
+                    <input type="submit" value="Guardar Libro" class="guardar">
+                </section>
+    
+        
+             
             </form>
-
-
         </main>
 
         <!---- FOOTER-->
         <%- include('./partials/footer') %>
 </body>
+
 </html>
