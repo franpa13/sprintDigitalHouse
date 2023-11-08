@@ -32,7 +32,8 @@
                             <div class="prices">
                                 <div class="compra">
                                     <p>Precio: </br>
-                                        $<%= libroLista.price %> </p>
+                                        $<%= libroLista.price %>
+                                    </p>
                                 </div>
                                 <div class="pago">
                                     <p>Medio de Pago:</p>
@@ -52,8 +53,10 @@
                                 <p>Idioma: <%= libroLista.language %>
                                 </p>
                             </div>
+                            <form action="/carrito-de-compra" method="get">
+                                <a href="" class="carro"><button type="submit">Agregar al carro</button></a>
+                            </form>
 
-                            <a href="" class="carro"><button>Agregar al carro</button></a>
                         </div>
 
                     </div>
@@ -61,7 +64,8 @@
 
                         <section class="btns">
                             <div>
-                                <a href="/biblioteca/editar/<%= libroLista.id %>"><button class="boton-modificar">Modificar
+                                <a href="/biblioteca/editar/<%= libroLista.id %>"><button
+                                        class="boton-modificar">Modificar
                                         Producto</button></a>
                             </div>
                             <div>
@@ -74,7 +78,7 @@
                 </section>
 
 
-                
+
             </div>
         </main>
 
