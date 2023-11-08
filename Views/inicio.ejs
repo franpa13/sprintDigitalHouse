@@ -13,14 +13,14 @@
 
 
         <main class="main">
-       
+
             <section>
                 <img class="img__banner" src="/images/Banner.png" alt="">
                 <h3>Mejores Calificaciones:</h3>
                 <div class="calificaciones">
-                    
+
                     <div class="container">
-                            <% clasificaciones.forEach((clasificacion)=> { %>
+                        <% clasificaciones.forEach((clasificacion)=> { %>
                             <a href="/biblioteca/detalle/<%= clasificacion.id %>"><img
                                     src="/images/<%= clasificacion.image%>" alt="<%= clasificacion.title %>">
 
@@ -30,11 +30,65 @@
                                 </p>
                             </a>
                             <% }) %>
-                        </div>
+                    </div>
+                    <a class="button" href="/biblioteca"><button>Explorar Ahora</button></a>
+                </div>
+
+
+            </section>
+            <section class="asesoramiento">
+                <div class="as">
+                    <img src="/images/primer_libro.jpg" alt="">
+                    <h2>Asesoramiento literario</h2>
+                    <p>Obten apoyo profesional para mejorar tu escritura y desarrollar tu talento literario</p>
+                </div>
+                <div class="as">
+                    <img src="/images/segundo_libro.jpg" alt="">
+                    <h2>Venta de libros</h2>
+                    <p>Encuentra una amplia seleccion de libros de diferentes generos y escritores reconocidos</p>
+                </div>
+                <div class="as">
+                    <img src="/images/tercer_libro.jpg" alt="">
+                    <h2>Club de lectura</h2>
+                    <p>Unete a nuestra comunidad de amantes de la lectura y disfruta de intercambios literarios
+                        enriquecedores</p>
 
                 </div>
-                    </div>
+
+
             </section>
+            <div class="segunda__section">
+                <section class="formulario">
+                    <form class="contacto">
+                        <h2>Contactanos</h2>
+                        <label for="name">Nombre:</label>
+                        <input class="input__contacto" type="text" id="name" name="name" required>
+
+                        <label for="email">Correo electrónico:</label>
+                        <input  class="input__contacto" type="email" id="email" name="email" required>
+
+                        <label for="subject">Asunto:</label>
+                        <input  class="input__contacto" type="text" id="subject" name="subject" required>
+
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" required></textarea>
+
+                        <button class="btn__contacto" type="submit">Enviar</button>
+                    </form>
+                </section>
+                <section class="sobre__nosotros">
+                    <p>"En El Rincón del Libro, somos apasionados por los libros y estamos comprometidos a brindarte la
+                        mejor experiencia de compra de libros en línea en la hermosa provincia de Jujuy. Nuestra tienda
+                        en línea está diseñada para ofrecer una amplia variedad de libros, desde clásicos atemporales
+                        hasta emocionantes novedades, para satisfacer los gustos y preferencias de todos los amantes de
+                        la lectura. Nos enorgullece servir a la comunidad de Jujuy y más allá, conectando a lectores
+                        ávidos con historias cautivadoras. Nuestra misión es no solo proporcionarte libros de alta
+                        calidad, sino también fomentar la pasión por la lectura en nuestra región. ¡Acompáñanos en este
+                        viaje literario y permítenos ser tu destino preferido para descubrir y adquirir tus libros
+                        favoritos en línea!"</p>
+
+                </section>
+            </div>
         </main>
         <!---- FOOTER-->
         <%- include('./partials/footer') %>

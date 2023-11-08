@@ -1,31 +1,70 @@
 /*********************** HEADER ******************/
-@import 'header.css';
+/* @import 'header.css'; */
 /************************ Footer *************************/
-@import 'footer.css';
+/* @import 'footer.css'; */
 
 * {
     box-sizing: border-box;
     border: 0px;
     padding: 0px;
 }
-body{
+
+body {
     background-color: #dcd9fa;
     padding: 0px;
     margin: 0px;
-    
-}
-.main{
-    font-family: 'Roboto', sans-serif;
-}
-.calificaciones {
-    display: flex;
-}
-.main section h3{
-    text-align: center;
-    font-size: 30px;
-    
+
 }
 
+.main {
+    font-family: 'Roboto', sans-serif;
+}
+
+.calificaciones {
+    box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.main section h3 {
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.button {
+
+    display: flex;
+    justify-content: center;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button button {
+    background-color: #552b4d;
+    border-radius: 10px;
+    font-size: 18px;
+    height: 40px;
+    width: 200px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.fa-solid {
+    font-size: 25px;
+
+}
+
+.button button:hover {
+    background-color: #f1b222;
+    color: black;
+
+}
 
 .img__banner {
     width: 100%;
@@ -37,21 +76,25 @@ body{
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
-  
+
+
 }
-.container a{
+
+.container a {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 20vw;
 }
-.container a p{
+
+.container a p {
     display: flex;
     flex-direction: column;
 }
-.container a p i{
-    color: rgb(54, 204, 54);
+
+.container a p i {
+    color: rgb(8, 134, 8);
 }
 
 .container img {
@@ -64,5 +107,108 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+
+}
+
+.asesoramiento {
+    box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+    border-radius: 10px;
+    padding: 50px;
+    gap: 50px;
+}
+
+.asesoramiento img {
+    width: 20vw;
+    height: 16vw;
+}
+
+.as {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.as p {
+    width: 80%;
+}
+
+.formulario {
+    display: flex;
+    justify-content: flex-start;
+    width: 20%;
+    height: 32vw;
+    /* background-color: #3e8e41; */
+    box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 50px;
+    margin: 20px;
+}
+
+.contacto {
+    display: flex;
+    margin: 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    width: 100%;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.input__contacto {
+    padding: 0.3rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+}
+.input__contacto,textarea:focus{
+    outline: none;
+}
+textarea{
+    /* padding: 0.3rem; */
+
+    border: 1px solid #ccc;
+    font-size: 20px;
+    width: 100%;
+}
+
+.btn__contacto {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn__contacto:hover {
+    background-color: #3e8e41;
+}
+.segunda__section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sobre__nosotros{
+    margin-right: 50px;
+  /* background-color: #3e8e41; */
+  width: 70%;
+}
+.sobre__nosotros p{
+    font-size: 25px;
 }

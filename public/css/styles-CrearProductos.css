@@ -1,7 +1,7 @@
 /*********************** HEADER ******************/
-@import 'header.css';
+/* @import 'header.css'; */
 /************************ Footer *************************/
-@import 'footer.css';
+/* @import 'footer.css'; */
 
 * {
     box-sizing: border-box;
@@ -10,11 +10,13 @@
 }
 
 body {
-    /* border: solid 1px ; */
+
     padding: 0px;
     margin: 0px;
 }
-
+.header{
+    margin: 0;
+}
 /**************** Main ******************/
 main {
     display: flex;
@@ -38,23 +40,23 @@ main form {
 label{
     font-weight: bold;
 }
-input {
+.input__crear{
     width: 300px;
     height: 22px;
     margin-left: 10px;
 }
-/* Estilo predeterminado para los elementos input enfocados */
-input:focus {
-    outline: none; /* Elimina el borde al enfocar */
+
+.input__Crear:focus {
+    outline: none; 
   }
   
 
 textarea {
     width: 300px;
     margin-left: 10px;
-}/* Estilo predeterminado para los elementos input enfocados */
+}
 textarea:focus {
-    outline: none; /* Elimina el borde al enfocar */
+    outline: none; 
   }
   
 select {
@@ -62,14 +64,14 @@ select {
     height: 22px;
     margin-left: 10px;
 }
-/* Estilo predeterminado para los elementos input enfocados */
+
 select:focus {
-    outline: none; /* Elimina el borde al enfocar */
+    outline: none;
   }
   
 
 .primer__parte {
-    /* margin-bottom:85px; */
+
     width: 50%;
     display: flex;
     flex-direction: column;
