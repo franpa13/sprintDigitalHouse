@@ -14,97 +14,87 @@ body{
     margin: 0px;
 }
 /************* Main *****************/
-.main{
-    display: flex;
-    justify-content: center;
-}
-.Contenedor-Carro{
-    width: 82%;
+.carrito{
+text-align: center;
+ 
 
+
+    /* background-color: aqua; */
 }
-.Contenedor-Publicidad{
+table {
+
+    /* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
+    /* border-radius: 10px; */
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 12px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+.formas__de__pago{
+   
+    width: 80%;
+    margin:60px auto;
     display: flex;
     flex-direction: column;
-    width: 18%;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-#Articulo-1{
-    width: 100%;
-    display: flex;
-    border: solid 1px black;
-}
-#Articulo-1 img{
-    width: 100%;
-}
-#Contenido-Del-Articulo{
-    width: 60%;
-}
-.Imagen{
-    width: 20%;
-}
-.ImagenDeArticulo1{
-    width: 100%;
-}
-#Articulo-2{
-    width: 100%;
-    display: flex;
-    border: solid 1px black;
-}
-
-#Articulo-2 img{
-    width: 100%;
-}
-#Articulo-3{
-    width: 100%;
-    display: flex;
-    border: solid 1px black;
-}
-#Articulo-3 img{
-    width: 100%;
-}
-
-
-#Publicidad{
-    width: 200px;
-}
-#Publicidad img{
-    width: 100%;
-}
-#Destacados{
-    width: 200px;
-
-}
-#Destacados img{
-    width: 100%;
-}
-
-.DetallesDelProducto{
-    width: 20%;
-}
-#precio{
-    margin: auto;
-    padding: 15px;
-    display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
 }
-.Boton-Fisico-Digital{
-    padding: 15px;
-    display: flex;
-    justify-content: space-around;
-}
-#eliminar{
+.formas__de__pago h2{
+    border-bottom: 1px solid black;
+    text-align: center;
     width: 100%;
-    height: 66%;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-    align-items: center;
 }
-button{
-    border: solid 2px black;
-    padding: 5px;
+.formas__de__pago div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
 }
 
+.tipo__envio{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.tipo__envio select{
+    width:100%;
+    height: 2vw;
+
+}
+.formas__de__pago a{
+    width: 30%;
+    margin: 20px 20px 20px 20px;
+ 
+}
+.formas__de__pago a button{
+    background-color: #552b4d;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+}
+.formas__de__pago a button:hover{
+
+    color: #f1b222;
+}

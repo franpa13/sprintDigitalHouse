@@ -86,6 +86,10 @@ gap: 10vw;
     width: 45vw;
     box-shadow:  4px 4px 5px 5px rgba(0, 0, 0, 0.2);
 }
+.todo__inf form{
+display: flex;
+justify-content: end;
+}
 
 .carro {
     text-align: end;
