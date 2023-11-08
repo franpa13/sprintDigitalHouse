@@ -1,7 +1,7 @@
 /*********************** HEADER ******************/
-@import 'header.css';
+/* @import 'header.css'; */
 /************************ Footer *************************/
-@import 'footer.css';
+/* @import 'footer.css'; */
 
 * {
     box-sizing: border-box;
@@ -92,14 +92,14 @@ body {
 }
 
 
-input {
+.input__login {
     font-weight: 900;
     border-radius: 7%;
     transition: 0.2s;
 }
 
 
-input:hover {
+.input__login:hover {
     transform: scale(1.2);
 }
 
@@ -188,7 +188,7 @@ h1 {
     font-size: 24px;
 }
 
-p {
+.nombre__perfil {
     color: rgb(255, 0, 0);
     font-size: 15px;
 }

@@ -1,23 +1,22 @@
-<header id="header">
-    <section class="Contenedor-Header-Img-barra">
-        <div class="Contenedor-Imagen-LOGO">
-            <a href="/"><img id="imagen-LOGO" src="/images/logo.png" alt="Logo El Rincon del Libro"></a>
+ <link rel="stylesheet" href="/css/header.css">
+ <header class="header">
+    <section class="container__header">
+        <div class="img__logo">
+            <a href="/"><img src="/images/logo.png" alt="Logo El Rincon del Libro"></a>
         </div>
 
-        <div class="Contenedor-BarraDeBusqueda-Lupa">
 
-            <form action="/search" method="GET">
-                <input class="BarraDeBusqueda-Lupa" type="text" name="keywords" placeholder="Buscar Libros"
-                    class="search-form_input">
-                <button class="Lupa" type="submit"><i class="fas fa-search"></i></button>
-            </form>
-        </div>
+        <form  class="form__header" action="/search" method="GET">
+            <input type="text" name="keywords" placeholder="Buscar Libros" class="search-form_input">
+            <button class="lupa" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+
 
         <% if(locals.isLogged) {%>
             <div class="Contenedor-Icono-Perfil">
                 <a href="/UserProfile"> <img class="foto__perfil" src="/images/imageUsers/<%= locals.userLog.image %>"
                         alt="IMAGEN DE PERFIL"></i></button></a>
-                <p><strong>
+                <p class="name"><strong>
                         <%= locals.userLog.username %>
                     </strong></p>
             </div>
@@ -27,9 +26,6 @@
                     <a href="iniciar-sesion">Log in</a>
                 </div>
                 <% } %>
-
-
-
     </section>
     <nav class="Contenedor-Lista">
         <ul class="Lista" type="none">

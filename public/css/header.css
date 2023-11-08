@@ -1,4 +1,101 @@
-.nombre__imagen {
+.header{
+   display: flex;
+   flex-direction: column;
+   background-color: #552b4d;
+   color: white;
+   font-family: 'Roboto', sans-serif;
+   height: 17vw;
+
+}
+.container__header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin:2vw 2vw 0vw 2vw;
+   /* margin-left: 4vw;
+   margin-right: 4vw; */
+}
+.img__logo a img{
+ width: 10vw;
+
+}
+.foto__perfil{
+   border-radius: 100%;
+   width: 6vw;
+   height:6vw;
+}
+.form__header{
+   display: flex;
+   justify-content: center;
+margin-right: 50px;
+   width: 30vw;
+   gap: 10px;
+}
+.form__header input{
+   width: 20vw;
+   padding: 8px;
+}
+.form__header input:focus{
+   outline: none;
+}
+.name {
+   font-size: 16px;
+   text-align: center;
+}
+.lupa{
+   cursor: pointer;
+   background-color: #552b4d;
+   color: white;
+   font-size: 17px;
+   border: none;
+}
+.Contenedor-Lista{
+   display: flex;
+   justify-content: center;
+   padding-left: 0px;
+   margin-left: 0px;
+
+}
+.Lista{
+   width: 100%;
+   display: flex;
+   margin: 20px;
+   justify-content: center;
+   padding: 0;
+}
+.Lista li a{
+   margin: 40px;
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+}
+.Lista li a:hover{
+   color: #ffcc55;
+}
+.fa-solid{
+   font-weight: bold;
+   font-size: 20px;
+}
+.register__log {
+   width: 12vw;
+   display: flex;
+   justify-content: space-around;
+}
+.register__log a {
+   background-color: rgb(255, 255, 255);
+   border-radius: 5px;
+   text-align: center;
+   font-weight: 650;
+   width: 45%;
+   font-size: 15px;
+   border: 2px solid;
+   padding: 5px;
+}
+.register__log a:hover{
+   background-color: #f1b222;
+} 
+
+/* .nombre__imagen {
    margin-top: 22px;
 }
 
@@ -27,7 +124,7 @@
 }
 
 .foto__perfil {
-   width: 5vw;
+   width: 2vw;
    border-radius: 15px;
    
 }
@@ -65,8 +162,8 @@
    padding: 10px;
    max-width: 100%;
    height: 13vw;
-   background-color: #552b4d;
    
+   background-color: #552b4d;
 }
 
 #imagen-LOGO {
@@ -80,37 +177,33 @@
 }
 
 .Contenedor-BarraDeBusqueda-Lupa {
-   width: 35%;
+   width: 45%;
    display: flex;
    margin-left: 25px;
-   justify-content: flex-start;
+   justify-content: center;
    align-items: center;
+   background-color: #f1b222;
 
 }
-/* .Contenedor-BarraDeBusqueda-Lupa form{
-   margin-left: 3vw;
-} */
+.Contenedor-BarraDeBusqueda-Lupa form{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
 
 .Contenedor-BarraDeBusqueda-Lupa input {
    width: 20vw;
    display: flex;
-   /* margin-left: 10vw; */
+
   align-items: center;
   background-color: #f1f1f1; 
   border-radius: 20px; 
   padding: 5px; 
 }
 
-form {
-   display: flex;
-}
 
-.BarraDeBusqueda-Lupa {
-   width: 88%;
-   height: 30px;
-  
-   border: solid 1px black;
-}
 
 .Lupa {
    background-color: #007bff; 
@@ -120,6 +213,7 @@ form {
    margin-left: 5px; 
    cursor: pointer;
    padding: 10px 20px;
+   margin-bottom: 10px;
    transition: background-color 0.3s ease;
 }
 .Lupa:hover{
@@ -248,11 +342,7 @@ a {
    
 }
 
-.register__log {
-   width: 12vw;
-   display: flex;
-   justify-content: space-around;
-}
+
 
 .register__log a {
    background-color: rgb(255, 255, 255);
@@ -266,4 +356,4 @@ a {
 }
 .register__log a:hover{
    background-color: #f1b222;
-}
+} */
