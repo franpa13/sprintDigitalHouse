@@ -44,7 +44,9 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+.button:hover{
+    text-decoration: none;
+}
 .button button {
     background-color: #552b4d;
     border-radius: 10px;
@@ -63,6 +65,7 @@ body {
 .button button:hover {
     background-color: #f1b222;
     color: black;
+    text-decoration: none;
 
 }
 
@@ -86,6 +89,8 @@ body {
     justify-content: center;
     align-items: center;
     width: 20vw;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 
 .container a p {

@@ -90,6 +90,9 @@ margin-right: 50px;
    font-size: 15px;
    border: 2px solid;
    padding: 5px;
+   text-decoration: none;
+   color:black ;
+   border: none;
 }
 .register__log a:hover{
    background-color: #f1b222;
