@@ -2,137 +2,140 @@
 /* @import 'header.css'; */
 /************************ Footer *************************/
 /* @import 'footer.css'; */
-
-*{
-    box-sizing: border-box;
-    border: 0px;
-    font-family: 'Roboto', sans-serif;
-}
-body{
-    background-color: #dcd9fa;
-    padding: 0px;
-    margin: 0px;
-}
-
-/**************** Main ******************/
-.Contenedor-img-form{
-    padding: 20px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #dcd9fa;
-}
-.Contenedor-Formulario{
-    display: flex;
-    flex-direction: column;
- 
-}
-.Imagen-Formulario img{
-    width: 25vw;
-    margin-left: 10vw;
-
-}
-.Imagen-Formulario{
-    width:40%;
-}
+@media screen and (min-width: 600px) {
 
 
-.Formulario p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-
-}
-.Formulario p label{
-    font-family: 'Roboto', sans-serif;
-}
-
-input{
-    font-weight: 900;
-    border-radius: 7%;
-    transition: 0.2s;
-}
-label{
-    color: rgb(0, 0, 0);
-    font-weight: 900;
- 
-}
-input:hover{
-    transform: scale(1.2);
-}
-.Formulario{
-    width: 500vw;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0px;
-    margin-bottom: 7vw;
-
-}
-.Formulario input{
-    width: 30vw;
-    font-size: 14px;
-    padding: 5px;
-  
-    display: flex;
-    flex-direction: column;
-    margin-top: 5px;
-}
-.foto__perfil input{
-    background-color:white ;
-}
-
-#text-log-in {
-    margin-top: 100px;
-    font-size: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 550;
-    color: darkmagenta;
-}
-.Formulario button{
-    padding: 7px;
-
-    display: flex;
-    flex-direction: column;
-}
-.botones{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #490b3d;
-    color: white;
-    border: none;
-    width:15vw;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: large;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-}
-.botones:hover{
-
-    background-color: #f1b222;
-    color: black;
-
-}
-.botones-enviar-borrar{
-  width: 40vw;
-   display: flex;
-   justify-content: space-around;
-  
-}
-
-
-.boton__borrar{
-    background-color:#dcd9fa ;
-    font-weight: 500;
-    font-size: 19px;
-    cursor: pointer;
-}
-.boton__borrar:hover{
-    color: #9e7109;
+    *{
+        box-sizing: border-box;
+        border: 0px;
+        font-family: 'Roboto', sans-serif;
+    }
+    body{
+        background-color: #dcd9fa;
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    /**************** Main ******************/
+    .Contenedor-img-form{
+        padding: 20px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #dcd9fa;
+    }
+    .Contenedor-Formulario{
+        display: flex;
+        flex-direction: column;
+     
+    }
+    .Imagen-Formulario img{
+        width: 25vw;
+        margin-left: 10vw;
+    
+    }
+    .Imagen-Formulario{
+        width:40%;
+    }
+    
+    
+    .Formulario p {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+    
+    }
+    .Formulario p label{
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    input{
+        font-weight: 900;
+        border-radius: 7%;
+        transition: 0.2s;
+    }
+    label{
+        color: rgb(0, 0, 0);
+        font-weight: 900;
+     
+    }
+    input:hover{
+        transform: scale(1.2);
+    }
+    .Formulario{
+        width: 500vw;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+        margin-bottom: 7vw;
+    
+    }
+    .Formulario input{
+        width: 30vw;
+        font-size: 14px;
+        padding: 5px;
+      
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+    }
+    .foto__perfil input{
+        background-color:white ;
+    }
+    
+    #text-log-in {
+        margin-top: 100px;
+        font-size: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 550;
+        color: darkmagenta;
+    }
+    .Formulario button{
+        padding: 7px;
+    
+        display: flex;
+        flex-direction: column;
+    }
+    .botones{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #490b3d;
+        color: white;
+        border: none;
+        width:15vw;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: large;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+    }
+    .botones:hover{
+    
+        background-color: #f1b222;
+        color: black;
+    
+    }
+    .botones-enviar-borrar{
+      width: 40vw;
+       display: flex;
+       justify-content: space-around;
+      
+    }
+    
+    
+    .boton__borrar{
+        background-color:#dcd9fa ;
+        font-weight: 500;
+        font-size: 19px;
+        cursor: pointer;
+    }
+    .boton__borrar:hover{
+        color: #9e7109;
+    }
 }
