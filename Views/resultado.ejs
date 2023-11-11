@@ -1,41 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('./partials/head') %>
-    <link rel="stylesheet" href="/css/resultado.css">
+        <link rel="stylesheet" href="/css/resultado.css">
+
 </head>
+
 <body>
     <!------ HEADER ------>
-        <%- include('./partials/header') %>
-
+    <%- include('./partials/header') %>
         <main>
-                <div>
-                <h2>Resultado de la Busqueda: <%= resultado.length %></h2>
-                </div>
             <div>
-            <% if(resultado.length > 0){ %>
+                <h2>Resultado de la Búsqueda: <%= resultado.length %>
+                </h2>
+            </div>
+            <div class="body">
+                <% if (resultado.length> 0) { %>
+                    <% resultado.forEach((libro, index)=> { %>
+                        <div class="libro__card">
+                            <a href="/biblioteca/detalle/<%= libro.id %>">
+                                <div class="container__img">
+                                    <img src="/images/<%=libro.image %>" alt="<%= libro.title %>">
+                                </div>
+                            </a>
+                            <div class="info__libro">
+                                <div class="titulo">
+                                    <h4>TITULO: <%= libro.title %>
+                                    </h4>
+                                </div>
+                                <div class="genero">
+                                    <h4>GENERO: <%= libro.Genres.name %>
+                                    </h4>
+                                </div>
 
-                <% resultado.forEach((libro) => { %>
-                    <div id="Contenedor-Carrusel">
-                        <div class="Carrusel" id="Carrusel-1">
-                            <div class="ContenidoCarrusel" id="InfoContenido-1">
-                                <div id="InfoDelLibro">
-                                <div id="Genero"><h4>GENERO: <%=libro.genero %></h4></div>
-                                <div id="Titulo"><h4>TITULO: <%=libro.titulo %></h4></div>
-                                <div id="Descripcion"><h4>DESCRIPCION: <%=libro.descripcion %></h4></div></div>
-                                <div class="ContenedorDeImagen"><img src="/images/<%=libro.img %>" alt="<%=libro.titulo %>"></div>
                             </div>
+
                         </div>
-
-                <% }) %>
-
-            <% } else { %>
-                <h2 class="products-title" style="color: tomato;">No hay libros que coincidan con esa búsqueda</h2>
-            <% } %>
+                        <div class="description">
+                            <div class="descripcion" id="descripcion_<%= index %>">
+                                <h4>DESCRIPCION: <%= libro.description %>
+                                </h4>
+                            </div>
+                            <button class="mostrar-descripcion" id="mostrar-descripcion_<%= index %>">Mostrar
+                                Descripción</button>
+                        </div>
+                        <% }) %>
+                            <% } else { %>
+                                <div class="errores">
+                                <h2 class="products-title" style="color: tomato;">No hay libros que coincidan con esa
+                                    búsqueda</h2>
+                                    <a href="/"><button>Volver a la HOME</button></a>
+                                </div> 
+                                <% } %>
             </div>
         </main>
 
+
+
         <!---- FOOTER-->
-        <%- include('./partials/footer') %>
+        <!-- <%- include('./partials/footer') %> -->
 </body>
+<script src="/js/mostrar.js"></script>
+
 </html>

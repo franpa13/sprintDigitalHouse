@@ -1,22 +1,31 @@
-<header id="header">
-    <section class="Contenedor-Header-Img-barra">
-        <div class="Contenedor-Imagen-LOGO">
-        <a href="/"><img id="imagen-LOGO" src="/images/logo.png" alt="Logo El Rincon del Libro"></a></div>
-
-        <div class="Contenedor-BarraDeBusqueda-Lupa">
-
-            <form action="/search" method="GET">
-                <input class="BarraDeBusqueda-Lupa" type="text" name="keywords" placeholder="Buscar Libros" class="search-form_input">
-                <button class="Lupa" type="submit"><i class="fas fa-search"></i></button>
-            </form>
+ <link rel="stylesheet" href="/css/header.css">
+ <header class="header">
+    <section class="container__header">
+        <div class="img__logo">
+            <a href="/"><img src="/images/logo.png" alt="Logo El Rincon del Libro"></a>
         </div>
 
-        <div class="Contenedor-Icono-Notificacion">
-        <button id="Icono-Notificacion" type="submit"><i class="fa-regular fa-bell"></i></button></div>
 
-        <div class="Contenedor-Icono-Perfil">
-        <button id="Icono-Perfil" type="submit"><i class="fa-regular fa-user"></i></button></div>
+        <form  class="form__header" action="/search" method="GET">
+            <input type="text" name="keywords" placeholder="Buscar Libros" class="search-form_input">
+            <button class="lupa" title="buscar" type="submit"><i class="fas fa-search"></i></button>
+        </form>
 
+
+        <% if(locals.isLogged) {%>
+            <div class="Contenedor-Icono-Perfil">
+                <a href="/UserProfile"> <img class="foto__perfil" src="/images/imageUsers/<%= locals.userLog.image %>"
+                        alt="IMAGEN DE PERFIL"></i></button></a>
+                <p class="name"><strong>
+                        <%= locals.userLog.username %>
+                    </strong></p>
+            </div>
+            <% } else { %>
+                <div class="register__log">
+                    <a href="/registrarse">Register</a>
+                    <a href="iniciar-sesion">Log in</a>
+                </div>
+                <% } %>
     </section>
     <nav class="Contenedor-Lista">
         <ul class="Lista" type="none">
@@ -32,6 +41,29 @@
             <li><a href="">PREMIUN</a></li></div>
             <div id="CarritoDeCompras">
             <li id="Icono-CarritoDeCompras"><a href="/carrito-de-compra"><i class="fa-solid fa-cart-shopping"></i></a></li></div>
+
+            <li><a href="/">INICIO</a></li>
+
+
+            <li><a href="/biblioteca">BIBLIOTECA</a></li>
+
+
+            <li><a href="/iniciar-sesion">PERFIL</a></li>
+
+
+            <% if(locals.isLogged) { %>
+
+                <li><a href="/biblioteca/CreacionDeProductos">CREAR</a></li>
+
+
+                <li><a href="/logout">CERRAR SESION</a></li>
+
+                <% } %>
+                    <li id="Icono-CarritoDeCompras"><a href="/carrito-de-compra"><i
+                                class="fa-solid fa-cart-shopping"></i></a></li>
+
         </ul>
+
     </nav>
+
 </header>

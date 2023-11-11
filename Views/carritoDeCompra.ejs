@@ -1,78 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('./partials/head') %>
-    <link rel="stylesheet" href="/css/styles-Carrito.css">
+        <link rel="stylesheet" href="/css/styles-Carrito.css">
 </head>
+
 <body>
     <!------ HEADER ------>
     <%- include('./partials/header') %>
 
-    <main class="main">
-        <section class="Contenedor-Carro">
-             <h2>Tu Carrito De Compras</h2>
-             <div>
-                 <div class="ImagenDeArticulo1">    
-                  <article id="Articulo-1">
-                     <div class="Imagen"><img src="/images/Alicia-En-El-Pais-De-Las-Maravillas.jpg" alt="Alicia-En-El-Pais-De-Las-Maravillas"></div>
-                      <div id="Contenido-Del-Articulo">
-                        <h6>NOMBRE DEL LIBRO:</h6>
-                        <h6>GENERO DEL LIBRO:</h6>
-                        <h6>DESCRIPCION:</h6><p>hola que tal, estoy probando que tal va esto</p></div>
-                        <div class="DetallesDelProducto">
-                            <h4 id="precio">$****</h4>
-                            <div class="Boton-Fisico-Digital">
-                            <button type="submit">Fisico</button>
-                            <button type="submit">Digital</button></div>
-                            <div id="eliminar">
-                                <button type="reset">Eliminar</button>
-                            </div>
-                        </div>
-                  </article>
-                        
+        <main class="main">
+            <section class="carrito">
+                <h2>Productos de mi carrito <i class="fa-solid fa-cart-shopping" style="color: #1dad00;"></i></h2>
+                <div>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Producto 1</td>
+                                <td>$10.00</td>
+                                <td>2</td>
+                                <td>$20.00</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Producto 2</td>
+                                <td>$15.00</td>
+                                <td>3</td>
+                                <td>$45.00</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Producto 3</td>
+                                <td>$8.00</td>
+                                <td>5</td>
+                                <td>$40.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3"></td>
+                                <td>Total:</td>
+                                <td>$105.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
 
-                 <div class="ImagenDeArticulo1">    
-                  <article id="Articulo-2">
-                     <div class="Imagen"><img src="/images/Harry-Potter-La-Piedra-Filosofal.jpg" alt="Harry-Potter-La-Piedra-Filosofa"></div>
-                      <div id="Contenido-Del-Articulo">
-                        <h6>NOMBRE DEL LIBRO:</h6>
-                        <h6>GENERO DEL LIBRO:</h6>
-                        <h6>DESCRIPCION:</h6><p>hola que tal, estoy probando que tal va esto</p></div>
-                        <div class="DetallesDelProducto">
-                            <h4 id="precio">$****</h4>
-                            <div class="Boton-Fisico-Digital">
-                            <button type="submit">Fisico</button>
-                            <button type="submit">Digital</button></div>
-                            <div id="eliminar">
-                                <button type="reset">Eliminar</button>
-                            </div>
-                        </div>
-                  </article>
+            </section>
+            <div class="formas__de__pago">
+                <h2>Terminar la compra</h2>
+                <div>
+                    <div class="tipo__envio">
+                        <p>Tipo Envio</p>
+                        <select name="" id="">
+                            <option value="">Correo Argentino</option>
+                            <option value="">Sucursal</option>
+                        </select>
+                    </div>
+                    <div class="tipo__envio">
+                        <p> Pago </p>
+                        <select name="" id="">
+                            <option value="">Efectivo</option>
+                            <option value="">Debito</option>
+                            <option value="">Credito</option>
+                        </select>
+                    </div>
+                </div>
+                <a href="/carrito-de-compras"><button>Comprar</button></a>
 
+            </div>
 
-
-                 <div class="ImagenDeArticulo1">    
-                   <article id="Articulo-3">
-                         <div class="Imagen"><img src="/images/Quijote-De-La-Mancha.jpg" alt="Quijote-De-La-Mancha"></div>
-                          <div id="Contenido-Del-Articulo">
-                            <h6>NOMBRE DEL LIBRO:</h6>
-                            <h6>GENERO DEL LIBRO:</h6>
-                            <h6>DESCRIPCION:</h6><p>hola que tal, estoy probando que tal va esto</p></div>
-                            <div class="DetallesDelProducto">
-                                <h4 id="precio">$****</h4>
-                                <div class="Boton-Fisico-Digital">
-                                <button type="submit">Fisico</button>
-                                <button type="submit">Digital</button></div>
-                                <div id="eliminar">
-                                    <button type="reset">Eliminar</button>
-                                </div>
-                            </div>
-                   </article>
-                </section>
-                        
-
-
-        <div class="Contenedor-Publicidad">
+            <!-- <div class="Contenedor-Publicidad">
             <div id="Destacados">
             <h4>Descatados</h4>
             <img src="/images/Cincuenta-Sombras-De-Grey.jpg" alt="Cincuenta-Sombras-De-Grey"></div>
@@ -81,11 +90,12 @@
             <img src="/images/publicidad.jpg" alt="Publicidad">
             <img src="/images/publicidad2.jpg" alt="Publicidad">
             <img src="/images/publicidad3.jpg" alt="Publicidad"></div>
-        </div>
-    </main>
+        </div> -->
+        </main>
 
 
-    <!---- FOOTER-->
-    <%- include('./partials/footer') %>
+        <!---- FOOTER-->
+        <%- include('./partials/footer') %>
 </body>
+
 </html

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%- include('./partials/head') %>
+
+        <link rel="stylesheet" href="/css/styles-Log-In.css">
+        <title>Document</title>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+
+ 
+
+            
+            <div class="profile-container">
+                <div class="user-details">
+                    <img src="/images/imageUsers/<%= user.image %>" alt="Foto de perfil" class="profile-picture">
+                    <h1>
+                        <%= user.username %>
+                    </h1>
+                    <p class="nombre__perfil">
+                        <%= user.email %>
+                    </p>
+                </div>
+            </div>
+  
+
+    
+
+
+</body>
+
+</html>

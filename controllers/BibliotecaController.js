@@ -4,89 +4,176 @@ const path = require('path');
 const libros = require('../baseDatos/libros');
 const librosPath = path.join(__dirname, '../baseDatos/libros.json')
 console.log(librosPath)
+const db = require("../database/models")
+
 
 const bibliotecaController = {
     /**** BIBLIOTECA ****/
-    render : (req, res)=>{
-        res.render("biblioteca", {datos: libros})
+
+
+    render: (req, res) => {
+        db.Products.findAll({
+            include: [
+                {
+                    model: db.Genres,
+                    as: 'Genres',
+                    attributes: ['name']
+                }
+            ]
+        })
+            .then((libros) => {
+
+                res.render("biblioteca", { datos: libros })
+            })
     },
     /**** CREAR ****/
-    renderCrearProductos : (req, res) => {
-        res.render('CreacionDeProductos')
+    renderCrearProductos: (req, res) => {
+        db.Genres.findAll()
+        .then((genre)=>{
+            res.render('CreacionDeProductos',{genre})
+
+        })     
     },
-    crear: (req, res) =>{
-        const nuevoLibro = {
-            id: `${Date.now()}`,
-            titulo: req.body.titulo,
-            descripcion: req.body.descripcion,
-            genero: req.body.genero,
-            img: req.file?.filename ||  "default.png",
-            autor: req.body.autor,
-            precio: parseFloat(req.body.precio),
-            editorial: req.body.editorial,
-            idioma: req.body.idioma,
-            cantidad: parseInt(req.body.cantidad),  
-        };
+    crear: async (req, res) => {
+        const genre = await db.Genres.findOne({ where: { name: req.body.genero } });
+        const nuevoLibro = await db.Products.create(
+            {
 
-        libros.push(nuevoLibro);
+                title: req.body.titulo,
+                description: req.body.descripcion,
+                id_genre: genre ? genre.id : null, // Usar el ID del género encontrado o null si no se encuentra
+                image: req.file?.filename || "default.png",
+                autor: req.body.autor,
+                price: parseFloat(req.body.precio),
+                editorial: req.body.editorial,
+                language: req.body.idioma,
+                stock: parseInt(req.body.cantidad),
+            })
 
-        fs.writeFileSync(librosPath, JSON.stringify(libros));
+
+
+        // libros.push(nuevoLibro);
+
+        // fs.writeFileSync(librosPath, JSON.stringify(libros));
 
         res.redirect("/biblioteca")
     },
     /**** DETALLE ****/
-    renderDetalle : (req, res) => {
+    renderDetalle: (req, res) => {
         const { id } = req.params;
-
-        const libroID = libros.find((libro) => libro.id === id)
-
-        res.render('detalle-producto', { libroLista : libroID})
+        db.Products.findByPk(id) // Busca un producto por su ID
+            .then((libro) => {
+                if (libro) {
+                    res.render('detalle-producto', { libroLista: libro });
+                } else {
+                    // Manejar el caso en el que no se encontró el producto con el ID dado
+                    res.status(404).send("Producto no encontrado");
+                }
+            })
+            .catch((err) => {
+                console.log("Error en el servidor: ", err);
+                res.status(500).send("Error en el servidor");
+            });
     },
+
     /**** EDITAR ****/
-    rendermodificarProductos : (req, res) => {
+    rendermodificarProductos: (req, res) => {
         const { id } = req.params;
-
-        const editLibro = libros.find((libro) => libro.id === id)
-
-        res.render('ModificarProductos', { editar: editLibro})
+    
+        // Obtén todos los géneros de la base de datos
+        db.Genres.findAll()
+            .then((generos) => {
+                // Luego, obtén el libro que deseas editar
+                db.Products.findByPk(id, {
+                    include: "Genres",
+                })
+                    .then((libro) => {
+                        res.render('ModificarProductos', { editar: libro, generos });
+                    })
+                    .catch((err) => {
+                        console.log("Error en el servidor: ", err);
+                        res.status(500).send("Error en el servidor");
+                    });
+            })
+            .catch((err) => {
+                console.log("Error en el servidor: ", err);
+                res.status(500).send("Error en el servidor");
+            });
     },
-    editando: (req, res) => {
+    
+
+    editando: async (req, res) => {
         const { id } = req.params;
 
-        const editando = libros.find((libro) => libro.id === id)
-
-        const indexLibro = libros.indexOf(editando)
-
-        console.log(req.body)
-        libros[indexLibro] = {
-            id : editando.id,
-            titulo : req.body.titulo,
-            descripcion : req.body.descripcion,
-            genero : req.body.genero,
-            img :req.file?.filename ||  "default.png",
-            autor : req.body.autor,
-            precio : req.body.precio,
-            editorial : req.body.editorial,
-            idioma : req.body.idioma,
-            cantidad : req.body.cantidad,
+        const generoName = req.body.genero;
+        const genero = await db.Genres.findOne({ where: { name: generoName } });
+        
+        if (!genero) {
+          console.error('El género seleccionado no es válido.');
+          res.status(400).send('El género seleccionado no es válido.');
+          return;
         }
-
-        fs.writeFileSync(librosPath, JSON.stringify(libros));
-
-
-        res.redirect('/biblioteca');
+  
+        const nuevosValores = {
+            title: req.body.titulo,
+            description: req.body.descripcion,
+            id_genre: genero.id, // Utiliza el valor de género verificado
+            image: req.file?.filename || "default.png",
+            autor: req.body.autor,
+            price: req.body.precio,
+            editorial: req.body.editorial,
+            language: req.body.idioma, // Asegúrate de que el nombre del campo sea 'language'
+            stock: req.body.cantidad,
+        };
+    
+        // Define la condición para encontrar el producto que deseas editar
+        const condicion = {
+            where: { id: id }, // Condición basada en el 'id' del producto
+        };
+    
+        // Llama a update para modificar el producto
+        db.Products.update(nuevosValores, condicion)
+            .then(() => {
+                res.redirect('/biblioteca');
+            })
+            .catch(error => {
+                console.error('Error al actualizar el producto:', error);
+                // Maneja el error apropiadamente, por ejemplo, renderizando una vista de error.
+                res.status(500).send('Error al actualizar el producto');
+            });
+    
     },
+    
+
     /**** Eliminar ****/
-    eliminar : (req, res) => {
+    eliminar: (req, res) => {
         const { id } = req.params;
+     
 
-        const nuevaLista = libros.filter((libro) => libro.id !== id);
+     
+        const productoId = id;
+        
+        // Utiliza el método `destroy` para eliminar el producto por su ID
+        db.Products.destroy({
+          where: {
+            id: productoId
+          }
+        })
+          .then(() => {
+           res.redirect("/biblioteca")
+          })
+          .catch((error) => {
+            console.error('Error al eliminar el producto:', error);
+            // Maneja el error apropiadamente, por ejemplo, renderizando una vista de error.
+          });
+        
+        // const nuevaLista = libros.filter((libro) => libro.id !== id);
 
-        fs.writeFileSync(librosPath, JSON.stringify(nuevaLista));
+        // fs.writeFileSync(librosPath, JSON.stringify(nuevaLista));
 
-        const nuevoListaDeLibros = JSON.parse(fs.readFileSync(librosPath, "utf-8"));
+        // const nuevoListaDeLibros = JSON.parse(fs.readFileSync(librosPath, "utf-8"));
 
-        res.render("biblioteca", {datos : nuevoListaDeLibros})
+        // res.render("biblioteca", { datos: nuevoListaDeLibros })
     }
 }
 

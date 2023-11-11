@@ -1,15 +1,12 @@
-/*********************** HEADER ******************/
-@import 'header.css';
-/************************ Footer *************************/
-@import 'footer.css';
-
 *{
     box-sizing: border-box;
     border: 0px;
-    padding: 1px;
+    font-family: 'Roboto', sans-serif;
 }
 body{
-    border: solid 1px black;
+    background-color: #dcd9fa;
+    padding: 0px;
+    margin: 0px;
 }
 
 /**************** Main ******************/
@@ -17,84 +14,149 @@ body{
     padding: 20px;
     margin: auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgb(57,96,155);
-    background: linear-gradient(90deg, rgba(57,96,155,1) 5%, rgba(68,170,170,1) 67%, rgba(182,242,241,1) 95%);
+    flex-direction: row;
+    
+    background-color: #dcd9fa;
 }
 .Contenedor-Formulario{
+    width: 100%;
+   
+ 
+}
+
+
+
+
+.Formulario p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+}
+.Formulario p label{
+    font-family: 'Roboto', sans-serif;
+}
+form{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.Imagen-Formulario img{
-    width: 100%;
-}
-.Imagen-Formulario{
-    width:55%;
-}
-.Formulario{
-    display: flex;
-    flex-direction: column;
+    ;
 }
 input{
     font-weight: 900;
-    border-radius: 7%;
     transition: 0.2s;
 }
 label{
-    color: forestgreen;
+    color: rgb(0, 0, 0);
     font-weight: 900;
+ 
 }
 input:hover{
     transform: scale(1.2);
 }
 .Formulario{
-    width: 40%;
+    width: 500vw;
     height: 500px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+   
     align-items: center;
+    margin-top: 0px;
+    margin-bottom: 7vw;
+
+}
+.doble-input{
+    justify-content: start;
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
     
+    gap: 20px;
 }
 .Formulario input{
+    width: 30vw;
+    font-size: 14px;
     padding: 5px;
-    border:solid 1px black;
+  
     display: flex;
     flex-direction: column;
+    margin-top: 5px;
 }
-#text-log-in{
-    font-size: 30px;
+.foto__perfil input{
+    background-color:white ;
+}
+
+#text-log-in {
+    margin-top: 100px;
+    font-size: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 900;
+    font-weight: 550;
     color: darkmagenta;
 }
-.Formulario button{
-    padding: 7px;
-    border:solid 1px black;
-    display: flex;
-    flex-direction: column;
-}
+
 .botones{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 20px;
-    background-color: rgb(34, 15, 201) ;
+    background-color: #490b3d;
     color: white;
     border: none;
+    width:15vw;
     border-radius: 4px;
     cursor: pointer;
-    font-size: medium;
-    color: rgba(251, 255, 3, 0.479);
-    font-weight: 900;
+    font-size: large;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.botones:hover{
+
+    background-color: #f1b222;
+    color: black;
+
 }
 .botones-enviar-borrar{
+    width: 50vw;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
+    justify-content: space-around;
+  
 }
+.contenedor-inputs{
+    display: flex;
+}
+    
+.boton__borrar{
+    background-color:#dcd9fa ;
+    font-weight: 500;
+    font-size: 19px;
+    cursor: pointer;
+    background-color: #490b3d
+}
+.boton__borrar:hover{
+    color: #9e7109;
+}
+.Nombre-Usuario-Correcto{
+    border:  4px solid rgb(44, 245, 44);
+}
+.Nombre-Usuario-Incorrecto{
+    border:  4px solid rgb(245, 44, 44);
+}
+.Email-Correcto{
+    border:  4px solid rgb(44, 245, 44);
+}
+.Email-Incorrecto{
+    border:  4px solid rgb(245, 44, 44);
+}
+.Password-Correcto{
+    border:  4px solid rgb(44, 245, 44);
+}
+.Password-Incorrecto{
+    border:  4px solid rgb(245, 44, 44);
+}
+.rePassword-Correcto{
+    border:  4px solid rgb(44, 245, 44);
+}
+.rePassword-Incorrecto{
+    border:  4px solid rgb(245, 44, 44);
+}                                                                                                                                                               
