@@ -19,23 +19,17 @@ body{
     padding: 20px;
     margin: auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    
     background-color: #dcd9fa;
 }
 .Contenedor-Formulario{
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+   
  
 }
-.Imagen-Formulario img{
-    width: 25vw;
-    margin-left: 10vw;
 
-}
-.Imagen-Formulario{
-    width:40%;
-}
+
 
 
 .Formulario p {
@@ -46,7 +40,12 @@ body{
 .Formulario p label{
     font-family: 'Roboto', sans-serif;
 }
-
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ;
+}
 input{
     font-weight: 900;
     transition: 0.2s;
@@ -63,12 +62,21 @@ input:hover{
     width: 500vw;
     height: 500px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+   
     align-items: center;
     margin-top: 0px;
     margin-bottom: 7vw;
 
+}
+.doble-input{
+    justify-content: start;
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    
+    gap: 20px;
 }
 .Formulario input{
     width: 30vw;
@@ -92,12 +100,7 @@ input:hover{
     font-weight: 550;
     color: darkmagenta;
 }
-.Formulario button{
-    padding: 7px;
 
-    display: flex;
-    flex-direction: column;
-}
 .botones{
     display: flex;
     justify-content: space-around;
@@ -119,18 +122,21 @@ input:hover{
 
 }
 .botones-enviar-borrar{
-  width: 40vw;
-   display: flex;
-   justify-content: space-around;
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
   
 }
-
-
+.contenedor-inputs{
+    display: flex;
+}
+    
 .boton__borrar{
     background-color:#dcd9fa ;
     font-weight: 500;
     font-size: 19px;
     cursor: pointer;
+    background-color: #490b3d
 }
 .boton__borrar:hover{
     color: #9e7109;

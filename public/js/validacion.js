@@ -24,6 +24,7 @@ window.addEventListener("load", function(){
                     idNombreUsuario.classList.add('Nombre-Usuario-Correcto')
                     idNombreUsuario.classList.remove('Nombre-Usuario-Incorrecto')
                     //si esta correcto que avise en la vista
+                    
                     campos.nombreUsuario = true
                 }else {
                     let idNombreUsuario = document.querySelector("#Nombre-Usuario")
@@ -102,10 +103,11 @@ window.addEventListener("load", function(){
             //si esta llenado el formulario se enviara
             console.log("enviado")
         }else{
+   
             console.log("no enviado");
             //el formulario no esta llenado correctamente
         }
         
         
     })
-})
+})  

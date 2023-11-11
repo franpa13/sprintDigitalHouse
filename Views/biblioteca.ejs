@@ -19,7 +19,7 @@
                 <% datos.forEach((libros)=> { %>
 
                     <div class="libro__card">
-
+                        <div class="contenedorINFORMACION">
                         <div class="container__img">
                             <a href="/biblioteca/detalle/<%= libros.id %>"> <img src="/images/<%= libros.image %>" alt="<%= libros.titulo %>"></a>
                         </div>
@@ -32,8 +32,9 @@
                                 <h4>GENERO: <%= libros.Genres.name %>
                                 </h4>
                             </div>
-
                         </div>
+
+
                     </div>
                     <div class="description">
                         <div class="descripcion">
@@ -43,10 +44,13 @@
                         </div>
                         <button class="mostrar-descripcion">Mostrar Descripción</button>
                     </div>
+                </div>
                     <% }) %>
+                
+
 
             </div>
-
+</div>
         </main>
 
 

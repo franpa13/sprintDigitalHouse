@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <%- include('./partials/head') %>
+        <%- include('./partials/head') %>
         <link rel="stylesheet" href="/css/styles-Register.css">
 </head>
 
@@ -12,61 +12,42 @@
 
         <main>
             <section class="Contenedor-img-form">
-                <div class="Imagen-Formulario"><img src="/images/logo.png" alt="logo del Rincon Del Libro"></div>
+                
                 <form id="Formulario"  class="Formulario" action="/registrarse" method="post" enctype="multipart/form-data" >
-                    <p id="text-log-in">Register</p>
-                    <p>
+                    <p id="text-log-in"></p>
+                    <div class="contenedor-inputs">
+                    <p class="doble-input">
                         <label for="Nombre-Usuario">Nombre De Usuario</label>
                         <input type="text" name="NombreUsuario" value="<%= (locals.old && old.NombreUsuario) ? old.NombreUsuario : ``  %>" id="Nombre-Usuario" placeholder="NombreUsuario">
-                        <% if(locals.errors && errors.NombreUsuario) {%>
-                                <i>
-                                    <%= errors.NombreUsuario.msg %>
-                                </i>
-                       <% } %>
-                    </p>
+             
 
-                    <p>
+                    
                         <label for="Email">Email</label>
                         <input type="email" name="Email" id="Email" value="<%= (locals.old && old.Email) ? old.Email : ``  %>" placeholder="Email">
-                        <% if(locals.errors && errors.Email) {%>
-                                <i>
-                                    <%= errors.Email.msg %>
-                                </i>
-                       <% } %>
+
+                        
+
                     </p>
 
-                    <p>
+                    <p class="doble-input" >
                         <label for="password">Contraseña</label>
                         <input type="password" name="password" id="password" placeholder="Contraseña"  >
-                        <% if(locals.errors && errors.password) {%>
-                                <i>
-                                    <%= errors.password.msg %>
-                                </i>
-                       <% } %>
-                    </p>
-                    <p>
+
+                    
                         <label for="repassword">Introduce la contraseña nuevamente</label>
                         <input type="password" name="rePassword" id="repassword" placeholder="Contraseña">
-                        <% if(locals.errors && errors.rePassword) {%>
-                                <i>
-                                    <%= errors.rePassword.msg %>
-                                </i>
-                       <% } %>
-                    </p>
 
-                    <p >
                         <label for="image">Foto de Perfil</label>
-                        <input class="foto__perfil" type="file" name="image" id="image" placeholder="Email" accept=".png,.jpg,.jpeg">
+                        <input class="foto_perfil" type="file" name="image" id="image" accept=".png,.jpg,.jpeg">
+                        
+                        
                     </p>
-                    <div class="botones-enviar-borrar">
-                        <button class="botones" type="submit">Registrarse</button>
-                        <button class="boton__borrar" type="reset">Borrar</button>
-                    </div>
-                    <div class="errores">
-                        <ul>
-
-                        </ul>
-                    </div>
+                </div>
+                        <div class="botones-enviar-borrar">
+                            <button class="botones" type="submit">Registrarse</button>
+                            <button class="boton__borrar botones" type="reset">Borrar</button>
+                        </div>
+                    
                 </form>
                 </div>
             </section>
