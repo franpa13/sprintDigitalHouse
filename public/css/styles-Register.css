@@ -124,6 +124,7 @@ input:hover{
 }
 .contenedor-inputs{
     display: flex;
+    padding: 50px;
 }
     
 .boton__borrar{
@@ -159,4 +160,21 @@ input:hover{
 }
 .rePassword-Incorrecto{
     border:  4px solid rgb(245, 44, 44);
-}                                                                                                                                                               
+}  
+
+.error_user {
+    display: none;
+}           
+.error_email{
+    display: none;
+}                 
+.error_password{
+    display: none;
+
+}   
+.error_repassword{
+    display: none;
+}
+.sinerrores{
+    display: block;
+}                                                                                                                              
