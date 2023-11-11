@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
-    "username": "franpa13",
-    "password": "aguantekobe13",
+    "username": "root",
+    "password": "root",
     "database": "sprint",
     "host": "127.0.0.1",
     "dialect": "mysql"
