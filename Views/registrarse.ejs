@@ -13,7 +13,7 @@
         <main>
             <section class="Contenedor-img-form">
                 <div class="Imagen-Formulario"><img src="/images/logo.png" alt="logo del Rincon Del Libro"></div>
-                <form class="Formulario" action="/registrarse" method="post" enctype="multipart/form-data" >
+                <form id="Formulario"  class="Formulario" action="/registrarse" method="post" enctype="multipart/form-data" >
                     <p id="text-log-in">Register</p>
                     <p>
                         <label for="Nombre-Usuario">Nombre De Usuario</label>
@@ -58,15 +58,19 @@
                         <label for="image">Foto de Perfil</label>
                         <input class="foto__perfil" type="file" name="image" id="image" placeholder="Email" accept=".png,.jpg,.jpeg">
                     </p>
-                    
                     <div class="botones-enviar-borrar">
                         <button class="botones" type="submit">Registrarse</button>
                         <button class="boton__borrar" type="reset">Borrar</button>
                     </div>
+                    <div class="errores">
+                        <ul>
+
+                        </ul>
+                    </div>
                 </form>
                 </div>
             </section>
-
+            <script src="js/validacion.js"></script>
         </main>
 
         <!---- FOOTER-->
