@@ -18,40 +18,40 @@
                     <p>
                         <label for="Nombre-Usuario">Nombre De Usuario</label>
                         <input type="text" name="NombreUsuario" value="<%= (locals.old && old.NombreUsuario) ? old.NombreUsuario : ``  %>" id="Nombre-Usuario" placeholder="NombreUsuario">
-                        <% if(locals.errors && errors.NombreUsuario) {%>
+                        <!-- <% if(locals.errors && errors.NombreUsuario) {%>
                                 <i>
                                     <%= errors.NombreUsuario.msg %>
                                 </i>
-                       <% } %>
+                       <% } %> -->
                     </p>
 
                     <p>
                         <label for="Email">Email</label>
                         <input type="email" name="Email" id="Email" value="<%= (locals.old && old.Email) ? old.Email : ``  %>" placeholder="Email">
-                        <% if(locals.errors && errors.Email) {%>
+                        <!-- <% if(locals.errors && errors.Email) {%>
                                 <i>
                                     <%= errors.Email.msg %>
                                 </i>
-                       <% } %>
+                       <% } %> -->
                     </p>
 
                     <p>
                         <label for="password">Contraseña</label>
                         <input type="password" name="password" id="password" placeholder="Contraseña"  >
-                        <% if(locals.errors && errors.password) {%>
+                        <!-- <% if(locals.errors && errors.password) {%>
                                 <i>
                                     <%= errors.password.msg %>
                                 </i>
-                       <% } %>
+                       <% } %> -->
                     </p>
                     <p>
                         <label for="repassword">Introduce la contraseña nuevamente</label>
                         <input type="password" name="rePassword" id="repassword" placeholder="Contraseña">
-                        <% if(locals.errors && errors.rePassword) {%>
+                        <!-- <% if(locals.errors && errors.rePassword) {%>
                                 <i>
                                     <%= errors.rePassword.msg %>
                                 </i>
-                       <% } %>
+                       <% } %> -->
                     </p>
 
                     <p >
