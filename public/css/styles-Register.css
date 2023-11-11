@@ -11,7 +11,7 @@ body{
 
 /**************** Main ******************/
 .Contenedor-img-form{
-    padding: 20px;
+    padding: 10px;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -59,7 +59,7 @@ input:hover{
     display: flex;
    
     align-items: center;
-    margin-top: 0px;
+
     margin-bottom: 7vw;
 
 }
@@ -70,20 +70,22 @@ input:hover{
     display: flex;
     flex-direction: column;
     margin: 10px;
-    
+    padding-bottom: 20px;
     gap: 20px;
 }
 .Formulario input{
-    width: 30vw;
+    width: 40vw;
     font-size: 14px;
     padding: 5px;
-  
+    
     display: flex;
     flex-direction: column;
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 .foto__perfil input{
     background-color:white ;
+    
 }
 
 #text-log-in {
@@ -120,11 +122,20 @@ input:hover{
     width: 50vw;
     display: flex;
     justify-content: space-around;
-  
+    margin-top: 50px;
 }
 .contenedor-inputs{
     display: flex;
+    padding: 10px;
+
 }
+.foto_perfil {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
     
 .boton__borrar{
     background-color:#dcd9fa ;
@@ -159,4 +170,24 @@ input:hover{
 }
 .rePassword-Incorrecto{
     border:  4px solid rgb(245, 44, 44);
-}                                                                                                                                                               
+} 
+#errorNombreUsuario{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15px;
+}         
+#errorEmail{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15px;
+}     
+#errorPassword{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15px;
+}
+#errorRePassword{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15px;
+}                                                                                                                                                       
