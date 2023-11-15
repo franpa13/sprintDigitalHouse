@@ -69,7 +69,7 @@ const homeController = {
               delete userLogin.password;
               req.session.userLog = userLogin;
       
-              if (req.body.recordar__usuario) {
+              if (req.body.recordar__usuario || true) {
                 res.cookie('userEmail', req.body.Email, { maxAge: 1000 * 60 * 2 });
               }
       
@@ -92,7 +92,7 @@ const homeController = {
     /**** REGISTRARSE ****/
     renderRegistrarse: (req, res) => {
         res.render('Registrarse')
-
+        
     },
     createUser: (req, res) => {
         res.redirect("/iniciar-sesion")

@@ -12,7 +12,7 @@
         </form>
 
 
-        <% if(locals.isLogged) {%>
+        <% if(locals.isLogged ) {%>
             <div class="Contenedor-Icono-Perfil">
                 <a href="/UserProfile"> <img class="foto__perfil" src="/images/imageUsers/<%= locals.userLog.image %>"
                         alt="IMAGEN DE PERFIL"></i></button></a>
@@ -39,7 +39,7 @@
             <li><a href="/iniciar-sesion">PERFIL</a></li>
 
 
-            <% if(locals.isLogged) { %>
+            <% if(locals.isLogged ) { %>
 
                 <li><a href="/biblioteca/CreacionDeProductos">CREAR</a></li>
 

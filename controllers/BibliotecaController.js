@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const libros = require('../baseDatos/libros');
-const librosPath = path.join(__dirname, '../baseDatos/libros.json')
-console.log(librosPath)
+
+
+
 const db = require("../database/models")
 
 

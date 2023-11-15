@@ -23,6 +23,8 @@ window.addEventListener("load", function(){
                     let idNombreUsuario = document.querySelector("#Nombre-Usuario")
                     idNombreUsuario.classList.add('Nombre-Usuario-Correcto')
                     idNombreUsuario.classList.remove('Nombre-Usuario-Incorrecto')
+                    let errorNombreUsuario = document.querySelector("#errorNombreUsuario")
+                    errorNombreUsuario.innerText = "";
                     //si esta correcto que avise en la vista
                     
                     campos.nombreUsuario = true
@@ -30,6 +32,8 @@ window.addEventListener("load", function(){
                     let idNombreUsuario = document.querySelector("#Nombre-Usuario")
                     idNombreUsuario.classList.remove('Nombre-Usuario-Correcto')
                     idNombreUsuario.classList.add('Nombre-Usuario-Incorrecto')
+                    let errorNombreUsuario = document.querySelector("#errorNombreUsuario")
+                    errorNombreUsuario.innerText = "Debe tener 4-16 caracteres y solo puede contener letras, números, (_) o (-).";
                     //si esta incorrecto que avise en la vista
                     campos.nombreUsuario = false
                 }
@@ -40,12 +44,16 @@ window.addEventListener("load", function(){
                     let idEmail = document.querySelector("#Email")
                     idEmail.classList.add('Email-Correcto')
                     idEmail.classList.remove('Email-Incorrecto')
+                    let errorEmail = document.querySelector("#errorEmail")
+                    errorEmail.innerText = "";
                     //si esta correcto que avise en la vista
                     campos.email = true
                 }else {
                     let idEmail = document.querySelector("#Email")
                     idEmail.classList.remove('Email-Correcto')
                     idEmail.classList.add('Email-Incorrecto')
+                    let errorEmail = document.querySelector("#errorEmail")
+                    errorEmail.innerText = "El Email no es valido";
                     //si esta incorrecto que avise en la vista
                     campos.email = false
                 }
@@ -56,12 +64,16 @@ window.addEventListener("load", function(){
                     let idPassword = this.document.querySelector("#password")
                     idPassword.classList.add("Password-Correcto")
                     idPassword.classList.remove("Password-Incorrecto")
+                    let errorPassword = document.querySelector("#errorPassword")
+                    errorPassword.innerText = "";
                     //si esta correcto que avise en la vista
                     campos.password = true
                 }else {
                     let idPassword = this.document.querySelector("#password")
                     idPassword.classList.remove("Password-Correcto")
                     idPassword.classList.add("Password-Incorrecto")
+                    let errorPassword = document.querySelector("#errorPassword")
+                    errorPassword.innerText = "Contraseña inválida. Debe tener entre 4 y 12 caracteres.";
                     //si esta incorrecto que avise en la vista
                     campos.password = false
                 }
@@ -80,6 +92,8 @@ window.addEventListener("load", function(){
             rePassword.classList.remove("Password-Correcto")
             rePassword.classList.add("Password-Incorrecto")
             campos.password = false
+            let errorRePassword = document.querySelector("#errorRePassword")
+            errorRePassword.innerText = "Contraseña Incorrecto. Debe ser igual a la contraseña";
             //si esta incorrecto que avise en la vista
 
             
@@ -87,6 +101,9 @@ window.addEventListener("load", function(){
             rePassword.classList.add("Password-Correcto")
             rePassword.classList.remove("Password-Incorrecto")
             campos.password = true
+            let errorRePassword = document.querySelector("#errorRePassword")
+            errorRePassword.innerText = "";
+            
             //si esta correcto que avise en la vista  
 
         }

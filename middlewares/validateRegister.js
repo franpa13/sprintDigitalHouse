@@ -10,6 +10,10 @@ const arrRegister = [
 ];
 
 const validateRegister = async (req, res, next) => {
+    // const email = req.body.Email; 
+
+    // res.cookie('Email', email, { maxAge: 900000, httpOnly: true });
+
     const errors = validationResult(req);
 
     try {

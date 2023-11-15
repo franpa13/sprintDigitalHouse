@@ -2,123 +2,126 @@
 /* @import 'header.css'; */
 /************************ Footer *************************/
 /* @import 'footer.css'; */
+@media screen and (min-width: 600px) {
 
-* {
-    box-sizing: border-box;
-    border: 0px;
-    font-family: 'Roboto', sans-serif;
-}
 
-body {
-
-    padding: 0px;
-    margin: 0px;
-}
-.header{
-    margin: 0;
-}
-/**************** Main ******************/
-main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-main form {
-    width: 65vw;
-    background-color: rgb(195, 160, 228);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0px;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 2vw;
-    margin-left: 6vw;
-}
-label{
-    font-weight: bold;
-}
-.input__crear{
-    width: 300px;
-    height: 22px;
-    margin-left: 10px;
-}
-
-.input__Crear:focus {
-    outline: none; 
-  }
-  
-
-textarea {
-    width: 300px;
-    margin-left: 10px;
-}
-textarea:focus {
-    outline: none; 
-  }
-  
-select {
-    width: 300px;
-    height: 22px;
-    margin-left: 10px;
-}
-
-select:focus {
-    outline: none;
-  }
-  
-
-.primer__parte {
-
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    height: 100%;
-
-    height: 28.3vw
-}
-
-.primer__parte div {
-
-    width: 100%;
-    gap: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.segunda__parte {
-    padding-left: 10px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border-left: 1px solid black;
-
-}
-
-.segunda__parte div {
-    width: 100%;
-    gap: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-
-}
-.segunda__parte .guardar{
-    width: 30%;
-    height: 30px;
-    margin-top: 15px;
-    font-size: 15px;
-    font-weight: bold;
-    background-color: #f1b222;
-    cursor: pointer;
-}
-.segunda__parte .guardar:hover{
-    background-color: #552b4d;
-    color: white;
+    * {
+        box-sizing: border-box;
+        border: 0px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    body {
+    
+        padding: 0px;
+        margin: 0px;
+    }
+    .header{
+        margin: 0;
+    }
+    /**************** Main ******************/
+    main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    main form {
+        width: 65vw;
+        background-color: rgb(195, 160, 228);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 2vw;
+        margin-left: 6vw;
+    }
+    label{
+        font-weight: bold;
+    }
+    .input__crear{
+        width: 300px;
+        height: 22px;
+        margin-left: 10px;
+    }
+    
+    .input__Crear:focus {
+        outline: none; 
+      }
+      
+    
+    textarea {
+        width: 300px;
+        margin-left: 10px;
+    }
+    textarea:focus {
+        outline: none; 
+      }
+      
+    select {
+        width: 300px;
+        height: 22px;
+        margin-left: 10px;
+    }
+    
+    select:focus {
+        outline: none;
+      }
+      
+    
+    .primer__parte {
+    
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+    
+        height: 28.3vw
+    }
+    
+    .primer__parte div {
+    
+        width: 100%;
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .segunda__parte {
+        padding-left: 10px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-left: 1px solid black;
+    
+    }
+    
+    .segunda__parte div {
+        width: 100%;
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    
+    }
+    .segunda__parte .guardar{
+        width: 30%;
+        height: 30px;
+        margin-top: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: #f1b222;
+        cursor: pointer;
+    }
+    .segunda__parte .guardar:hover{
+        background-color: #552b4d;
+        color: white;
+    }
 }
