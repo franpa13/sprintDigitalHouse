@@ -2,7 +2,7 @@
 /* @import 'header.css'; */
 /************************ Footer *************************/
 /* @import 'footer.css'; */
-@media screen and (min-width: 600px) {
+
 
     *{
         box-sizing: border-box;
@@ -99,4 +99,3 @@
     
         color: #f1b222;
     }
-}

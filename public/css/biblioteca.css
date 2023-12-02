@@ -90,22 +90,6 @@ body {
 
 
 
-/* * {
-    box-sizing: border-box;
-    border: 0px;
-    padding: 0px;
-}
-
-
-body {
-    background-color: #dcd9fa;
-    padding: 0px;
-
-    margin: 0px; 
-    /* border: solid 1px ; */
-
-}
-
 main{
     display: flex;
     flex-direction: column;
@@ -196,4 +180,4 @@ main{
     display: flex;
     flex-direction: column;
 }
- */
+ 
