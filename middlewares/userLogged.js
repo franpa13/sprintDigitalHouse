@@ -22,7 +22,7 @@ console.log("esto es email cookie" , emailCookie);
         req.session.userLog = userDeCookie
       }
   
-       if (req.session && req.session.userLog) {
+       if (req.session.userLog) {
       res.locals.isLogged = true;
       res.locals.userLog = req.session.userLog
     }
