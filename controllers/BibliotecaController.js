@@ -24,6 +24,7 @@ const bibliotecaController = {
             .then((libros) => {
 
                 res.render("biblioteca", { datos: libros })
+                console.log(libros,"estos son los libros");
             })
     },
     /**** CREAR ****/
