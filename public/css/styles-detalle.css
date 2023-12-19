@@ -3,6 +3,8 @@
 /************************ Footer *************************/
 /* @import 'footer.css'; */
 
+
+
 * {
     box-sizing: border-box;
     border: 0px;
@@ -33,9 +35,11 @@ main div {
     display: flex;
 
 }
-.img{
+
+.img {
     margin-left: 50vw;
 }
+
 main div img {
     margin-left: 500vw;
     width: 28vw;
@@ -46,14 +50,14 @@ main div img {
     display: flex;
     width: 65vw;
     flex-direction: column;
-  align-items: end;
+    align-items: end;
     justify-content: space-around;
     margin-left: 15vw;
 }
 
 .bookinf {
     width: 37vw;
-    display: flex; 
+    display: flex;
     gap: 2vw;
 
 
@@ -61,18 +65,19 @@ main div img {
 }
 
 .prices {
-margin-top: 2vw;
+    margin-top: 2vw;
     display: flex;
-justify-content: center;
-gap: 10vw;
+    justify-content: center;
+    gap: 10vw;
 
 }
-.pago{
+
+.pago {
 
     display: flex;
-    flex-direction:row;
-    
-    
+    flex-direction: row;
+
+
 }
 
 .todo__inf {
@@ -84,11 +89,12 @@ gap: 10vw;
     padding-left: 50px;
     padding: 50px;
     width: 45vw;
-    box-shadow:  4px 4px 5px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);
 }
-.todo__inf form{
-display: flex;
-justify-content: end;
+
+.todo__inf form {
+    display: flex;
+    justify-content: end;
 }
 
 .carro {

@@ -13,6 +13,7 @@
         <main>
             <section class="Contenedor-img-form">
 
+
                 <form id="Formulario" class="Formulario" action="/registrarse" method="post"
                     enctype="multipart/form-data">
                     <p id="text-log-in"></p>
@@ -24,10 +25,13 @@
                                 id="Nombre-Usuario" placeholder="NombreUsuario">
                             <a id="errorNombreUsuario"></a>
                             <!-- <% if(locals.errors && errors.NombreUsuario) {%>
+
+
                                 <i>
                                     <%= errors.NombreUsuario.msg %>
                                 </i>
                        <% } %> -->
+
 
 
                             <label for="Email">Email</label>
@@ -35,10 +39,12 @@
                                 value="<%= (locals.old && old.Email) ? old.Email : ``  %>" placeholder="Email">
                             <a id="errorEmail"></a>
                             <!-- <% if(locals.errors && errors.Email) {%>
+
                                 <i>
                                     <%= errors.Email.msg %>
                                 </i>
                        <% } %> -->
+
 
 
                             </div>
@@ -47,26 +53,31 @@
                             <input type="password" name="password" id="password" placeholder="Contraseña">
                             <a id="errorPassword"></a>
                             <!-- <% if(locals.errors && errors.password) {%>
+
                                 <i>
                                     <%= errors.password.msg %>
                                 </i>
                        <% } %> -->
 
 
+
                             <label for="repassword">Introduce la contraseña nuevamente</label>
                             <input type="password" name="rePassword" id="repassword" placeholder="Contraseña">
                             <a id="errorRePassword"></a>
                             <!-- <% if(locals.errors && errors.rePassword) {%>
+
                                 <i>
                                     <%= errors.rePassword.msg %>
                                 </i>
                        <% } %> -->
+
                             
                             <label for="image">Foto de Perfil</label>
                             <input class="foto_perfil" type="file" name="image" id="image" accept=".png,.jpg,.jpeg">
                             </div>
                    
                     </div>
+
                     <div class="botones-enviar-borrar">
                         <button class="botones" type="submit">Registrarse</button>
                         <button class="boton__borrar botones" type="reset">Borrar</button>

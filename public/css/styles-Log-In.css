@@ -3,6 +3,7 @@
 /************************ Footer *************************/
 /* @import 'footer.css'; */
 
+
 * {
     box-sizing: border-box;
     border: 0px;
@@ -194,4 +195,7 @@ h1 {
 .nombre__perfil {
     color: rgb(255, 0, 0);
     font-size: 15px;
+
+
+
 }
