@@ -6,6 +6,7 @@ const cookies = require('cookie-parser');
 const userLogged = require("./middlewares/userLogged");
 const userRoutes = require("./routers/api/userRoutes.js");
 const productsRoutes = require("./routers/api/productsRoutes.js");
+const genresRoutes = require("./routers/api/genresRoutes.js")
 
 // Agregar el middleware para permitir CORS
 app.use((req, res, next) => {
@@ -53,6 +54,7 @@ app.use('/biblioteca', bibliotecaRouter);
 // RUTAS DE APIS
 app.use(userRoutes);
 app.use(productsRoutes);
+app.use(genresRoutes)
 /**** falta modularizar estos */
 app.use('/carrito-de-compra', carritodecompraRouter);
 
