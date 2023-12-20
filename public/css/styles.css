@@ -2,7 +2,7 @@
 /* @import 'header.css'; */
 /************************ Footer *************************/
 /* @import 'footer.css'; */
-@media screen and (min-width: 600px) {
+
 
 
     * {
@@ -219,4 +219,3 @@
     .sobre__nosotros p{
         font-size: 25px;
     }
-}

@@ -10,6 +10,10 @@ const arrRegister = [
 ];
 
 const validateRegister = async (req, res, next) => {
+    // const email = req.body.Email; 
+
+    // res.cookie('Email', email, { maxAge: 900000, httpOnly: true });
+
     const errors = validationResult(req);
 
     try {
@@ -28,12 +32,13 @@ const validateRegister = async (req, res, next) => {
         const comparacion = compareSync(req.body.rePassword, hashing);
 
         if (comparacion) {
+
             // Crear un nuevo usuario en la base de datos
             const newUser = await db.Clients.create({
                 email: req.body.Email,
                 password: hashSync(req.body.password, 10),// Usar el hash del password
                 username: req.body.NombreUsuario,
-                image: req.file.filename,
+                image: req.file?.filename || "img-user-1703033263959.jpg",
 
             });
 

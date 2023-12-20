@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const libros = require('../baseDatos/libros');
-const librosPath = path.join(__dirname, '../baseDatos/libros.json')
-console.log(librosPath)
+
+
+
 const db = require("../database/models")
 
 
@@ -24,6 +24,7 @@ const bibliotecaController = {
             .then((libros) => {
 
                 res.render("biblioteca", { datos: libros })
+                console.log(libros,"estos son los libros");
             })
     },
     /**** CREAR ****/
@@ -67,7 +68,7 @@ const bibliotecaController = {
                     res.render('detalle-producto', { libroLista: libro });
                 } else {
                     // Manejar el caso en el que no se encontró el producto con el ID dado
-                    res.status(404).send("Producto no encontrado");
+                     res.redirect("/iniciar-sesion");
                 }
             })
             .catch((err) => {

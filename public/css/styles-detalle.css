@@ -2,160 +2,163 @@
 /* @import 'header.css'; */
 /************************ Footer *************************/
 /* @import 'footer.css'; */
-@media screen and (min-width: 600px) {
 
 
-    * {
-        box-sizing: border-box;
-        border: 0px;
-        font-family: 'Roboto', sans-serif;
-    }
-    
-    body {
-        /* border: solid 1px ; */
-    
-        padding: 0px;
-        margin: 0px;
-    }
-    
-    /************************ Main ***************************/
-    /* styles-detalle.css */
-    
-    main {
-    
-        margin: 20px;
-        display: flex;
-        justify-content: start;
-    }
-    
-    main div {
-    
-        border-radius: 10px;
-        /* background-color: rgb(255, 223, 252); */
-        display: flex;
-    
-    }
-    .img{
-        margin-left: 50vw;
-    }
-    main div img {
-        margin-left: 500vw;
-        width: 28vw;
-    }
-    
-    .detalle {
-    
-        display: flex;
-        width: 65vw;
-        flex-direction: column;
-      align-items: end;
-        justify-content: space-around;
-        margin-left: 15vw;
-    }
-    
-    .bookinf {
-        width: 37vw;
-        display: flex; 
-        gap: 2vw;
-    
-    
-    
-    }
-    
-    .prices {
+
+* {
+    box-sizing: border-box;
+    border: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    /* border: solid 1px ; */
+
+    padding: 0px;
+    margin: 0px;
+}
+
+/************************ Main ***************************/
+/* styles-detalle.css */
+
+main {
+
+    margin: 20px;
+    display: flex;
+    justify-content: start;
+}
+
+main div {
+
+    border-radius: 10px;
+    /* background-color: rgb(255, 223, 252); */
+    display: flex;
+
+}
+
+.img {
+    margin-left: 50vw;
+}
+
+main div img {
+    margin-left: 500vw;
+    width: 28vw;
+}
+
+.detalle {
+
+    display: flex;
+    width: 65vw;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-around;
+    margin-left: 15vw;
+}
+
+.bookinf {
+    width: 37vw;
+    display: flex;
+    gap: 2vw;
+
+
+
+}
+
+.prices {
     margin-top: 2vw;
-        display: flex;
+    display: flex;
     justify-content: center;
     gap: 10vw;
-    
-    }
-    .pago{
-    
-        display: flex;
-        flex-direction:row;
-        
-        
-    }
-    
-    .todo__inf {
-        border: 0.5px solid black;
-        /* border-right: 0.5px solid black; */
-        display: flex;
-        flex-direction: column;
-        margin-left: 50px;
-        padding-left: 50px;
-        padding: 50px;
-        width: 45vw;
-        box-shadow:  4px 4px 5px 5px rgba(0, 0, 0, 0.2);
-    }
-    .todo__inf form{
+
+}
+
+.pago {
+
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.todo__inf {
+    border: 0.5px solid black;
+    /* border-right: 0.5px solid black; */
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    padding-left: 50px;
+    padding: 50px;
+    width: 45vw;
+    box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.todo__inf form {
     display: flex;
     justify-content: end;
-    }
-    
-    .carro {
-        text-align: end;
-    
-    }
-    
-    .carro button {
-        color: white;
-        font-weight: bold;
-        background-color: rgb(36, 156, 0);
-        width: 150px;
-        height: 30px;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-    
-    .boton-modificar {
-        color: white;
-        font-weight: bold;
-        background-color: rgb(204, 54, 54);
-        width: 150px;
-        height: 30px;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-    
-    .detalle div {
-        display: flex;
-    
-    }
-    
-    .pago {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .book-detail {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    
-    }
-    
-    .comentarios {
-    
-        margin-top: 3vw;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        flex-direction: column;
-        width: 30vw;
-    
-    }
-    
-    
-    
-    .btns {
-    
-        display: flex;
-        margin-right: 8vw;
-        justify-content: center;
-        gap: 2vw;
-        width: 20vw;
-    }
-    
-    /* Estilos generales */
 }
+
+.carro {
+    text-align: end;
+
+}
+
+.carro button {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(36, 156, 0);
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.boton-modificar {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(204, 54, 54);
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.detalle div {
+    display: flex;
+
+}
+
+.pago {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.comentarios {
+
+    margin-top: 3vw;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    width: 30vw;
+
+}
+
+
+
+.btns {
+
+    display: flex;
+    margin-right: 8vw;
+    justify-content: center;
+    gap: 2vw;
+    width: 20vw;
+}
+
+/* Estilos generales */

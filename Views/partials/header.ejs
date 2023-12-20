@@ -1,31 +1,33 @@
- <link rel="stylesheet" href="/css/header.css">
- <header class="header">
+<link rel="stylesheet" href="/css/header.css">
+<header class="header">
     <section class="container__header">
         <div class="img__logo">
             <a href="/"><img src="/images/logo.png" alt="Logo El Rincon del Libro"></a>
         </div>
 
 
-        <form  class="form__header" action="/search" method="GET">
+        <form class="form__header" action="/search" method="GET">
             <input type="text" name="keywords" placeholder="Buscar Libros" class="search-form_input">
             <button class="lupa" title="buscar" type="submit"><i class="fas fa-search"></i></button>
         </form>
 
 
         <% if(locals.isLogged) {%>
-            <div class="Contenedor-Icono-Perfil">
-                <a href="/UserProfile"> <img class="foto__perfil" src="/images/imageUsers/<%= locals.userLog.image %>"
-                        alt="IMAGEN DE PERFIL"></i></button></a>
-                <p class="name"><strong>
-                        <%= locals.userLog.username %>
-                    </strong></p>
-            </div>
-            <% } else { %>
-                <div class="register__log">
-                    <a href="/registrarse">Register</a>
-                    <a href="iniciar-sesion">Log in</a>
+
+                <div class="Contenedor-Icono-Perfil">
+                    <a href="/UserProfile"> <img class="foto__perfil"
+                            src="/images/imageUsers/<%= locals.userLog.image %>"
+                            alt="IMAGEN DE PERFIL"></i></button></a>
+                    <p class="name"><strong>
+                            <%= locals.userLog.username %>
+                        </strong></p>
                 </div>
-                <% } %>
+                <% } else{ %>
+                    <div class="register__log">
+                        <a href="/registrarse">Registrarse</a>
+                        <a href="iniciar-sesion">Inicar Sesion</a>
+                    </div>
+                    <% } %>
     </section>
     <nav class="Contenedor-Lista">
         <ul class="Lista" type="none">
@@ -39,14 +41,19 @@
             <li><a href="/iniciar-sesion">PERFIL</a></li>
 
 
-            <% if(locals.isLogged) { %>
-
-                <li><a href="/biblioteca/CreacionDeProductos">CREAR</a></li>
-
-
+            <% if(locals.isLogged ) { %>
+                
                 <li><a href="/logout">CERRAR SESION</a></li>
 
+                <% if(locals.userLog.email === "admin@gmail.com") { %>
+
+                    <li><a href="/biblioteca/CreacionDeProductos">CREAR</a></li>
+    
+                    <% } %>
+
                 <% } %>
+
+            
                     <li id="Icono-CarritoDeCompras"><a href="/carrito-de-compra"><i
                                 class="fa-solid fa-cart-shopping"></i></a></li>
 
