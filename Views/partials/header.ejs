@@ -24,8 +24,8 @@
                 </div>
                 <% } else{ %>
                     <div class="register__log">
-                        <a href="/registrarse">Register</a>
-                        <a href="iniciar-sesion">Log in</a>
+                        <a href="/registrarse">Registrarse</a>
+                        <a href="iniciar-sesion">Inicar Sesion</a>
                     </div>
                     <% } %>
     </section>
@@ -42,13 +42,18 @@
 
 
             <% if(locals.isLogged ) { %>
-
-                <li><a href="/biblioteca/CreacionDeProductos">CREAR</a></li>
-
-
+                
                 <li><a href="/logout">CERRAR SESION</a></li>
 
+                <% if(locals.userLog.email === "admin@gmail.com") { %>
+
+                    <li><a href="/biblioteca/CreacionDeProductos">CREAR</a></li>
+    
+                    <% } %>
+
                 <% } %>
+
+            
                     <li id="Icono-CarritoDeCompras"><a href="/carrito-de-compra"><i
                                 class="fa-solid fa-cart-shopping"></i></a></li>
 

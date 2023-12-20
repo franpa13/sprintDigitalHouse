@@ -68,7 +68,7 @@ const bibliotecaController = {
                     res.render('detalle-producto', { libroLista: libro });
                 } else {
                     // Manejar el caso en el que no se encontró el producto con el ID dado
-                    res.status(404).send("Producto no encontrado");
+                     res.redirect("/iniciar-sesion");
                 }
             })
             .catch((err) => {

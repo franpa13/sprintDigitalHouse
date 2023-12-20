@@ -32,12 +32,13 @@ const validateRegister = async (req, res, next) => {
         const comparacion = compareSync(req.body.rePassword, hashing);
 
         if (comparacion) {
+
             // Crear un nuevo usuario en la base de datos
             const newUser = await db.Clients.create({
                 email: req.body.Email,
                 password: hashSync(req.body.password, 10),// Usar el hash del password
                 username: req.body.NombreUsuario,
-                image: req.file.filename,
+                image: req.file?.filename || "img-user-1703033263959.jpg",
 
             });
 

@@ -16,15 +16,15 @@
 
                 <form id="Formulario" class="Formulario" action="/registrarse" method="post"
                     enctype="multipart/form-data">
-                    <p id="text-log-in"></p>
+                    <p id="text-log-in">Registrarse</p>
                     <div class="contenedor-inputs">
-                        <div class="doble-input">
-                            <label for="Nombre-Usuario">Nombre De Usuario</label>
-                            <input type="text" name="NombreUsuario"
-                                value="<%= (locals.old && old.NombreUsuario) ? old.NombreUsuario : ``  %>"
-                                id="Nombre-Usuario" placeholder="NombreUsuario">
-                            <a id="errorNombreUsuario"></a>
-                            <!-- <% if(locals.errors && errors.NombreUsuario) {%>
+                        <!-- <div class="doble-input"> -->
+                        <label for="Nombre-Usuario">Nombre De Usuario</label>
+                        <input type="text" name="NombreUsuario"
+                            value="<%= (locals.old && old.NombreUsuario) ? old.NombreUsuario : ``  %>"
+                            id="Nombre-Usuario" placeholder="NombreUsuario">
+                        <a id="errorNombreUsuario"></a>
+                        <!-- <% if(locals.errors && errors.NombreUsuario) {%>
 
 
                                 <i>
@@ -34,11 +34,11 @@
 
 
 
-                            <label for="Email">Email</label>
-                            <input type="email" name="Email" id="Email"
-                                value="<%= (locals.old && old.Email) ? old.Email : ``  %>" placeholder="Email">
-                            <a id="errorEmail"></a>
-                            <!-- <% if(locals.errors && errors.Email) {%>
+                        <label for="Email">Email</label>
+                        <input type="email" name="Email" id="Email"
+                            value="<%= (locals.old && old.Email) ? old.Email : ``  %>" placeholder="Email">
+                        <a id="errorEmail"></a>
+                        <!-- <% if(locals.errors && errors.Email) {%>
 
                                 <i>
                                     <%= errors.Email.msg %>
@@ -47,12 +47,12 @@
 
 
 
-                            </div>
-                        <div class="doble-input">
-                            <label for="password">Contraseña</label>
-                            <input type="password" name="password" id="password" placeholder="Contraseña">
-                            <a id="errorPassword"></a>
-                            <!-- <% if(locals.errors && errors.password) {%>
+                        <!-- </div> -->
+                        <!-- <div class="doble-input"> -->
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password" placeholder="Contraseña">
+                        <a id="errorPassword"></a>
+                        <!-- <% if(locals.errors && errors.password) {%>
 
                                 <i>
                                     <%= errors.password.msg %>
@@ -61,36 +61,39 @@
 
 
 
-                            <label for="repassword">Introduce la contraseña nuevamente</label>
-                            <input type="password" name="rePassword" id="repassword" placeholder="Contraseña">
-                            <a id="errorRePassword"></a>
-                            <!-- <% if(locals.errors && errors.rePassword) {%>
+                        <label for="repassword">Introduce la contraseña nuevamente</label>
+                        <input type="password" name="rePassword" id="repassword" placeholder="Contraseña">
+                        <a id="errorRePassword"></a>
+                        <!-- <% if(locals.errors && errors.rePassword) {%>
 
                                 <i>
                                     <%= errors.rePassword.msg %>
                                 </i>
                        <% } %> -->
 
-                            
-                            <label for="image">Foto de Perfil</label>
-                            <input class="foto_perfil" type="file" name="image" id="image" accept=".png,.jpg,.jpeg">
-                            </div>
-                   
-                    </div>
 
-                    <div class="botones-enviar-borrar">
-                        <button class="botones" type="submit">Registrarse</button>
-                        <button class="boton__borrar botones" type="reset">Borrar</button>
-                    </div>
+                        <label for="image">Foto de Perfil</label>
+                        <input class="foto_perfil" type="file" name="image" id="image" accept=".png,.jpg,.jpeg">
+                        <!-- </div> -->
+
+                        <!-- </div> -->
+
+                        <div class="botones-enviar-borrar">
+                            <button class="botones" type="submit">Registrarse</button>
+                            <button class="boton__borrar botones" type="reset">Borrar</button>
+                        </div>
 
                 </form>
                 </div>
+         
+                
+                
             </section>
             <script src="js/validacion.js"></script>
         </main>
-
-        <!---- FOOTER-->
+        
         <%- include('./partials/footer') %>
+        <!---- FOOTER-->
 </body>
 
 </html>
