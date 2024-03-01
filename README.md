@@ -1,10 +1,8 @@
 Integrantes:
-Amadeo Abud : Seras lo que seas o seras abogado.
-Raúl Mamaní: Si no compila hoy, compilara mañana.
+Paredes Francisco: Persevera y triunfaras
 Gonzalez Ariel : Java o Python, esa es la cuestion.
-Mamani Hugo: Soy nuevo programando :3
-Flores Rodrigo: Mi programa dejo de funcionar cuando borre una i.
-Ulises Tejerina: "Disculpen la tardanza".
+
+
 
 Descripcion:
 ¿Qué productos o servicios brindará nuestro sitio?
